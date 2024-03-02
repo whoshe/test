@@ -3,7 +3,9 @@ import Layout from '@/component/layout'
 
 export default function Dashboard () {
     return (
-    <main>대시보드 화면</main>
+    <main>    
+대시보드 화면
+  </main>
     )
 }
 
