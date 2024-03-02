@@ -6,3 +6,11 @@ export default function Menus({menu, isActive}) {
 (<li className='btn btn-block text-lg'>{menu.name}</li>)}
 </>
 );}
+
+export function Items({item, isActive}) {
+    console.log(isActive); 
+    return (<>
+        {isActive === true ? (<button className='btn btn-ghost text-lg'>{item.title}</button>) : 
+(<button className='btn btn-primary text-lg'>{item.title}</button>)}
+</>
+);}

@@ -1,5 +1,5 @@
 import Header from '@/component/header';
-import DashboardHeader from './dashboardHeader';
+import DashboardHeader from '@/component/dashboard/dashboardHeader';
 
 export default function DashboardLayout ({children}) {
     return (
