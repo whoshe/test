@@ -1,4 +1,4 @@
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menus, Items } from '@/component/menus';
 
@@ -8,7 +8,7 @@ export default function DashboardHeader () {
     const items = [
         {
           id: '1',
-          title: '회원 목록',
+          title: '목록',
           href: '/dashboard/account',
         },
          {
@@ -21,18 +21,20 @@ export default function DashboardHeader () {
     console.log(router.pathname);
 
     return (<>
-    <h1>대시보드 머리글</h1>
+    <h1>{router.pathname === '/dashboard/account' ? '대시보드 머리글' : ''}</h1>
     
-<nav> 
+<nav className='flex'>
+
   {items.map((item) => 
-  (<>
-      <li
+  (<><Link href={item.href}>
+      <button
       key={item.id} 
        onClick={() => {router.push(item.href)}} 
-       className={router.pathname === item.href ? 'btn btn-ghost' : 'btn btn-primary'}
+       className={router.pathname === item.href ? 'btn btn-sm btn-ghost text-primary text-lg' : 'btn btn-sm btn-ghost text-lg'}
      >
       {item.title}
-    </li>
+    </button>
+    </Link>
      {/* <Items item={item}
      isActive={router.pathname === item.href ? true: false}/> */}
     </>
