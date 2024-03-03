@@ -10,9 +10,9 @@ export default function Sidebar () {
     const menus = [
         {name:"홈", path: "/"},
         {name:"대시보드", path: "/dashboard"},
-        {name:"회원 관리", path: "/dashboard/account"},
-        {name:"회원 추가", path: "/dashboard/makeAccount"},
-        {name:"캐시 관리", path: "/newsletter"}
+        {name:"회원관리", path: "/dashboard/account"},
+        {name:"회원추가", path: "/dashboard/makeAccount"},
+        {name:"뉴스레터", path: "/newsletter"}
     ];
 
     return (
