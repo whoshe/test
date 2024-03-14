@@ -1,4 +1,4 @@
-import NewsletterLayout from '@/component/newsletter/newsletterLayout';
+import NewsletterLayout from '@/component/newsletterLayout';
 
 export default function Newsletter () {
   return <main>뉴스레터</main>

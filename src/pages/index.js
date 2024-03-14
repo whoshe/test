@@ -1,18 +1,22 @@
-import Layout from '@/component/layout'
-import { lazy, useEffect } from 'react';
-import { BrowerRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Dashboard from './dashboard';
+import LandingLayout from '@/component/landingLayout'
+import Link from 'next/link'
+import LandingFooter from '@/component/landing/landingFooter'
 
-
-// 홈 화면 
-export default function Home () {
-return (
-    <main>홈 화면</main>
-    )
+// 홈 화면
+export default function Root() {
+  return (
+    <>
+      <main className='flex-grow'>
+        <div className='my-0 py-16'>
+          랜딩 페이지 인덱스 화면
+          <Link href='/admin/home' className='btn'>
+            어드민으로 들어가ㅇㅁㅇㄹ
+          </Link>
+        </div>
+        <LandingFooter />
+      </main>
+    </>
+  )
 }
 
-Home.getLayout = (page) => (
-    <Layout>
-        {page}
-    </Layout>
-)
+Root.getLayout = (page) => <LandingLayout>{page}</LandingLayout>

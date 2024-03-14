@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix",
+    "format": "prettier --write --ignore-path .prettierignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "load": "node --experimental-modules src/script/load.mjs"
   },
   "dependencies": {
     "eslint": "8.32.0",
