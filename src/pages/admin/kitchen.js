@@ -1,13 +1,21 @@
 import LayoutAdmin from '@/component/layoutAdmin'
 import Layout from '@/component/drawer/drawerLayout'
 import Link from 'next/link'
-import KitchenSink from '@/component/kitchen/kitchenSink'
+import KitchenHeader from '@/component/admin/kitchenHeader'
 
 export default function Kitchen() {
   return (
-    <section>
-      <KitchenSink />
-    </section>
+    <>
+      <KitchenHeader />
+      <section>
+        {/* 부엌 조리대 */}
+        <div class=' text-gray-900 px-6'>
+          <div class='max-w-xl mx-auto py-12 md:max-w-4xl'>
+            <h2 class='text-2xl font-bold'>조리대 전체 목록</h2>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
 
