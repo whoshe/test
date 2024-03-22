@@ -6,7 +6,7 @@ export default function Header() {
       <nav className='flex justify-between items-center w-full'>
         <div>
           <label htmlFor='my-drawer-2' className='btn btn-primary drawer-button lg:hidden'>
-            Open drawer
+            메뉴
           </label>
           <Link href='/admin/' className='btn btn-ghost'>
             관리자 집으로
