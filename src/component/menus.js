@@ -14,6 +14,6 @@ export default function Menus({ menu, isActive }) {
 export function Items({ menu, isActive }) {
   console.log(isActive)
   return (
-    <>{isActive === true ? '' : <li className='btn btn-sm btn-neutral text-xl'>{menu.name}</li>}</>
+    <>{isActive === true ? '' : <li className='btn btn-ghost text-primary text-xl'>{menu.name}</li>}</>
   )
 }

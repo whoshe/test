@@ -36,26 +36,6 @@ export default function AccountHeader() {
           )
         })}
       </nav>
-
-      {items.map((item) => (
-        <>
-          <Link href={item.path}>
-            <button
-              key={item.id}
-              onClick={() => {
-                router.push(item.path)
-              }}
-              className={
-                router.pathname === item.path
-                  ? 'btn btn-sm btn-ghost text-primary text-lg'
-                  : 'btn btn-sm btn-ghost text-lg'
-              }
-            >
-              {item.name}
-            </button>
-          </Link>
-        </>
-      ))}
     </>
   )
 }

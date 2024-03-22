@@ -1,16 +1,19 @@
 import Link from 'next/link'
 
-export default function MypageHeader() {
+export default function LandingHeader() {
   return (
     <>
       <nav className='flex gap-8 justify-center items-center'>
+        <h1 className='text-3xl'> 내 지면 </h1>
         <Link href='/' className='btn btn-ghost'>
           집으로
         </Link>
-        <Link href='/' className='btn btn-ghost'>
+        <Link href='/mypage' className='btn btn-ghost'>
           내 지면
         </Link>
-        <h1>내 지면 머리글</h1>
+        <Link href='/admin' className='btn btn-ghost'>
+          관리자로
+        </Link>
       </nav>
     </>
   )

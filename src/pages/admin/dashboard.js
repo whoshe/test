@@ -4,10 +4,9 @@ import Layout from '@/component/drawer/drawerLayout'
 
 export default function Dashboard() {
   return (
-    <div className='flex-grow w-full'>
-      <DashboardHeader />
-      현황판 내용
-    </div>
+    <section>
+      <h1 className='text-3xl'>현황판입니다.</h1>
+    </section>
   )
 }
 

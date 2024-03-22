@@ -1,14 +1,15 @@
 import LandingHeader from '@/component/landing/landingHeader'
-import LandingFooter from '@/component/landing/landingFooter'
+import Footer from './footer'
+import Header from './header'
 
-export default function MypageLayout({ children }) {
+export default function LayoutLanding({ children }) {
   return (
     <div className='flex flex-col min-h-screen mx-auto max-w-2xl px-4 pt-8 pb-16'>
-      <LandingHeader />
+      <Header />
       <div className='flex-grow'>
         <main className='my-0 py-16'>{children}</main>
       </div>
-      <LandingFooter />
+      <Footer />
     </div>
   )
 }

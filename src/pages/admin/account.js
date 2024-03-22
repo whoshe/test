@@ -4,10 +4,10 @@ import Layout from '@/component/drawer/drawerLayout'
 
 export default function Account() {
   return (
-    <div className='flex-grow w-full'>
+    <section className='flex-grow w-full'>
       <AccountHeader />
       <div>계정 목록 화면</div>
-    </div>
+    </section>
   )
 }
 
