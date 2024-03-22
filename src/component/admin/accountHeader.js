@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Menus, Items } from '@/component/menus'
 
-export default function DashboardHeader() {
+export default function AccountHeader() {
   const items = [
     {
       id: '1',

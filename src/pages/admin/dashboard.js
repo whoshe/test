@@ -1,18 +1,18 @@
-import DashboardHeader from '@/component/admin/dashboardNav'
-import DashboardLayout from '@/component/dashboardLayout'
-import Layout from '@/component/layout'
+import DashboardHeader from '@/component/admin/dashboardHeader'
+import LayoutAdmin from '@/component/layoutAdmin'
+import Layout from '@/component/drawer/drawerLayout'
 
 export default function Dashboard() {
   return (
     <div className='flex-grow w-full'>
       <DashboardHeader />
-      <div>대시보드 메인 화면</div>
+      현황판 내용
     </div>
   )
 }
 
 Dashboard.getLayout = (page) => (
   <Layout>
-    <DashboardLayout>{page}</DashboardLayout>
+    <LayoutAdmin>{page}</LayoutAdmin>
   </Layout>
 )

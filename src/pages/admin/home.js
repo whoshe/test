@@ -1,17 +1,20 @@
-import Footer from '@/component/footer'
-import Header from '@/component/header'
-import Layout from '@/component/layout'
+import AdminFooter from '@/component/admin/adminFooter'
+import AdminHeader from '@/component/admin/adminHeader'
+import LayoutAdmin from '@/component/layoutAdmin'
+import Layout from '@/component/drawer/drawerLayout'
 
 export default function Home() {
   return (
     <main className='drawer-content flex flex-col min-h-screen items-center justify-center'>
-      <Header />
-      <div className='flex-grow w-full'>어드민 메인 화면</div>
-      <Footer />
+      <div className='flex-grow w-full'>관리자 대문 화면</div>
     </main>
   )
 }
 
 Home.getLayout = (page) => {
-  return <Layout>{page}</Layout>
+  return (
+    <Layout>
+      <LayoutAdmin>{page}</LayoutAdmin>
+    </Layout>
+  )
 }

@@ -8,8 +8,8 @@ export default function Header() {
           <label htmlFor='my-drawer-2' className='btn btn-primary drawer-button lg:hidden'>
             Open drawer
           </label>
-          <Link href='/' className='btn'>
-            홈
+          <Link href='/admin/' className='btn btn-ghost'>
+            관리자 집으로
           </Link>
         </div>
         <ul className='flex'>

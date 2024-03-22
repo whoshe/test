@@ -7,11 +7,12 @@ export default function Sidebar() {
   console.log(router.pathname)
 
   const menus = [
-    { name: '어드민', path: '/admin/home' },
+    { name: '관리자 대문', path: '/admin/home' },
     { name: '대시보드', path: '/admin/dashboard' },
     { name: '회원', path: '/admin/account' },
     { name: '회원추가', path: '/admin/accountMake' },
-    { name: '뉴스레터', path: '/newsletter' },
+    { name: '부엌', path: '/admin/kitchen-sink' },
+    { name: '내 지면', path: '/mypage' },
   ]
 
   return (
