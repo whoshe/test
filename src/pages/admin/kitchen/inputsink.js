@@ -183,8 +183,8 @@ export default function InputSink() {
           <div class='max-w-4xl mx-auto py-12'>
             <h2 class='text-2xl font-bold'>Untouched</h2>
             <p class='mt-2 text-lg text-gray-500'>
-              These are form elements we don't handle (yet?), but we use this to make sure we
-              haven't accidentally styled them by mistake.
+              These are form elements we don&apos;t handle (yet?), but we use this to make sure we
+              haven&apos;t accidentally styled them by mistake.
             </p>
             <div class='mt-8 grid grid-cols-2 gap-6 items-start'>
               <div class='grid grid-cols-1 gap-6'>
