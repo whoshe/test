@@ -6,17 +6,22 @@ export default function KitchenHeader() {
     {
       id: '0',
       name: '전체',
-      path: '/admin/kitchen',
+      path: '/',
     },
     {
       id: '1',
       name: 'Input',
-      path: '/admin/inputsink',
+      path: '/kitchen/inputsink',
     },
     {
       id: '2',
-      name: '기타',
-      path: '',
+      name: 'Search',
+      path: '/kitchen/combo',
+    },
+    {
+      id: '3',
+      name: 'Etc.',
+      path: '/kitchen/etc',
     },
   ]
   const router = useRouter()
@@ -25,7 +30,7 @@ export default function KitchenHeader() {
   return (
     <>
       <h1 className='text-3xl'>부엌</h1>
-      <div>
+      <section className='flex p-2 gap-2'>
         {items.map((item) => (
           <>
             <Link href={item.path}>
@@ -37,7 +42,7 @@ export default function KitchenHeader() {
                 className={
                   router.pathname === item.path
                     ? 'btn btn-sm btn-ghost text-primary text-lg'
-                    : 'btn btn-sm btn-ghost text-lg'
+                    : 'btn btn-sm btn-outline text-lg'
                 }
               >
                 {item.name}
@@ -45,7 +50,7 @@ export default function KitchenHeader() {
             </Link>
           </>
         ))}
-      </div>
+      </section>
     </>
   )
 }

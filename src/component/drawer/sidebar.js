@@ -9,9 +9,9 @@ export default function Sidebar() {
   const menus = [
     { name: '관리자', path: '/admin/welcome' },
     { name: '현황판', path: '/admin/dashboard' },
-    { name: '부엌', path: '/admin/kitchen' },
     { name: '회원', path: '/admin/account' },
     { name: '회원추가', path: '/admin/accountMake' },
+    { name: '부엌', path: '/kitchen' },
     { name: '내 지면', path: '/mypage' },
   ]
 

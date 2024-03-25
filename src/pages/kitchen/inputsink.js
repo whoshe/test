@@ -1,6 +1,6 @@
 import LayoutAdmin from '@/component/layoutAdmin'
-import Layout from '@/component/drawer/drawerLayout'
-import KitchenHeader from '@/component/admin/kitchenHeader'
+import Layout from '@/component/layout'
+import KitchenHeader from '@/component/kitchen/kitchenHeader'
 
 export default function InputSink() {
   return (
@@ -213,8 +213,4 @@ export default function InputSink() {
   )
 }
 
-InputSink.getLayout = (page) => (
-  <Layout>
-    <LayoutAdmin>{page}</LayoutAdmin>
-  </Layout>
-)
+InputSink.getLayout = (page) => <Layout>{page}</Layout>

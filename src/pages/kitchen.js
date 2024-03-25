@@ -1,7 +1,7 @@
 import LayoutAdmin from '@/component/layoutAdmin'
-import Layout from '@/component/drawer/drawerLayout'
+import Layout from '@/component/layout'
 import Link from 'next/link'
-import KitchenHeader from '@/component/admin/kitchenHeader'
+import KitchenHeader from '@/component/kitchen/kitchenHeader'
 
 export default function Kitchen() {
   return (
@@ -20,9 +20,5 @@ export default function Kitchen() {
 }
 
 Kitchen.getLayout = (page) => {
-  return (
-    <Layout>
-      <LayoutAdmin>{page}</LayoutAdmin>
-    </Layout>
-  )
+  return <Layout>{page}</Layout>
 }
