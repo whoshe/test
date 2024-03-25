@@ -11,7 +11,7 @@ export default function KitchenHeader() {
     {
       id: '1',
       name: 'Input',
-      path: '/kitchen/inputsink',
+      path: '/kitchen/input',
     },
     {
       id: '2',

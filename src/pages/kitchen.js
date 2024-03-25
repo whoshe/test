@@ -9,10 +9,8 @@ export default function Kitchen() {
       <KitchenHeader />
       <section>
         {/* 부엌 조리대 */}
-        <div class=' text-gray-900 px-6'>
-          <div class='max-w-xl mx-auto py-12 md:max-w-4xl'>
-            <h2 class='text-2xl font-bold'>조리대 전체 목록</h2>
-          </div>
+        <div class='mx-auto py-12'>
+          <h2 class='text-xl'>조리대 전체 목록</h2>
         </div>
       </section>
     </>
