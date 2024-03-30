@@ -4,11 +4,11 @@ import Header from './header'
 
 export default function LayoutLanding({ children }) {
   return (
-    <div className='flex flex-col min-h-screen mx-auto max-w-2xl px-4 pt-8 pb-16'>
-      <div className='flex-grow'>
-        <main className='my-0 py-16'>{children}</main>
+    <main className='flex flex-col min-h-screen'>
+      <div className='flex-grow mx-auto jusify-center content-center'>{children}</div>
+      <div className='mx-auto max-w-2xl'>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </main>
   )
 }
