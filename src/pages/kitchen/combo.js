@@ -58,12 +58,10 @@ export default function Combo() {
     <>
       <KitchenHeader />
       <section className='p-2'>
-        <div className='max-w-xl mx-auto py-12 md:max-w-4xl'>
-          <h2 className='text-2xl font-bold'>검색</h2>
-        </div>
+        <h2 className='text-2xl font-bold'>검색</h2>
         {/* 콤보박스 with Headless UI */}
-        <div>
-          <strong>콤보박스 with Headless UI</strong>
+        <div className='p-6'>
+          <h2 className='text-neutral-400 font-bold'>실험실에 오신 것을 환영합니다.</h2>
         </div>
         <Combobox as='div' value={selectedPerson} onChange={setSelectedPerson}>
           {/* 검색어 입력  */}
