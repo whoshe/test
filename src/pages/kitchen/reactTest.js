@@ -15,10 +15,10 @@ const user = {
 function Welcome({ name }) {
   return (
     <>
-      <section className='artboard-demo p-4'>
+      <section className='artboard artboard-demo p-4 gap-4'>
         <div className='flex gap-2 items-center justify-center'>
           <figure className='avatar'>
-            <div class='mask mask-squircle w-12 h-12'>
+            <div className='mask mask-squircle w-12 h-12'>
               <Image
                 src={user.imageUrl}
                 unoptimized
@@ -29,6 +29,24 @@ function Welcome({ name }) {
             </div>
           </figure>
           <h3 className='text-xl'>어서오세요 {name} 님,</h3>
+        </div>
+        <div className='text-center'>
+          <h3 className='text-xl'>스마트폰 사진 앱에서 QR 코드를 스캔하세요.</h3>
+          <div class='mockup-phone'>
+            <div class='camera'></div>
+            <div class='display'>
+              <div class='artboard artboard-demo phone-1'>
+                <Image
+                  className='object-cover min-w-full'
+                  src={user.imageUrl}
+                  unoptimized
+                  alt={'Photo of ' + user.name}
+                  width={user.imageSize}
+                  height={user.imageSize}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

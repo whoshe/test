@@ -8,11 +8,20 @@ export default function Root() {
     <>
       <KitchenHeader />
       {/* 환영 인사 */}
-      <section className='p-2'>
-        <div class='p-6'>
-          <h2 class='text-neutral-400 font-bold'>실험실에 오신 것을 환영합니다.</h2>
+      <section className='card w-full bg-base-100 shadow-md'>
+        <div class='p-4 card-body'>
+          <Welcome name='남반장' />
+          <h3 className='text-xl'>연습장에 오신 것을 환영합니다.</h3>
         </div>
       </section>
+    </>
+  )
+}
+
+function Welcome({ name }) {
+  return (
+    <>
+      <h3 className='text-xl'>어서오세요 {name} 님,</h3>
     </>
   )
 }
