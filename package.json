@@ -12,22 +12,23 @@
     "load": "node --experimental-modules src/script/load.mjs"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "eslint": "8.32.0",
     "eslint-config-next": "13.4.13",
+    "html5-qrcode": "^2.3.8",
     "next": "^13.5.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-router-dom": "^6.22.2",
-    "@headlessui/react": "^1.7.17",
-    "@heroicons/react": "^2.0.18"
+    "react-router-dom": "^6.22.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.17",
     "daisyui": "^3.1.10",
     "postcss": "^8.4.35",
     "prettier": "^2.8.4",
-    "tailwindcss": "^3.3.0",
-    "@tailwindcss/typography": "^0.5.9"
+    "tailwindcss": "^3.3.0"
   },
   "prettier": {
     "trailingComma": "all",
