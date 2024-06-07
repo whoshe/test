@@ -66,7 +66,7 @@ export default function Combo() {
 
         <Combobox value={selectedPerson} onChange={setSelectedPerson}>
           {/* 검색어 입력  */}
-          <div className='relative lg:my-2'>
+          <div className='relative lg:my-2 container max-w-2xl'>
             <Combobox.Input
               type='search'
               onChange={(event) => setQuery(event.target.value)}
@@ -84,7 +84,7 @@ export default function Combo() {
           <Combobox.Options
             static
             tabIndex={0}
-            className='container max-w-2xl z-[3] shadow bg-base-200 left-0 right-0 rounded-3xl'
+            className='container max-w-2xl z-[3] shadow left-0 right-0 rounded-xl my-2 py-2 bg-neutral-100'
           >
             {filteredPeople.map((person) => (
               <Combobox.Option key={person} value={person}>
