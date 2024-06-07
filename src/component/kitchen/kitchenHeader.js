@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import React from 'react'
 
 export default function KitchenHeader() {
   const items = [
@@ -39,23 +40,20 @@ export default function KitchenHeader() {
         <div className='overflow-x-auto'>
           <ul className='flex flex-nowrap gap-2'>
             {items.map((item) => (
-              <>
-                <Link href={item.path}>
-                  <li
-                    key={item.id}
-                    onClick={() => {
-                      router.push(item.path)
-                    }}
-                    className={
-                      router.pathname === item.path
-                        ? 'btn btn-sm btn-ghost text-primary text-lg whitespace-nowrap'
-                        : 'btn btn-sm btn-outline text-lg whitespace-nowrap'
-                    }
-                  >
-                    {item.name}
-                  </li>
-                </Link>
-              </>
+              <React.Fragment key={item.id}>
+                <li
+                  onClick={() => {
+                    router.push(item.path)
+                  }}
+                  className={
+                    router.pathname === item.path
+                      ? 'btn btn-sm btn-ghost text-primary text-lg whitespace-nowrap'
+                      : 'btn btn-sm btn-outline text-lg whitespace-nowrap'
+                  }
+                >
+                  <Link href={item.path}>{item.name}</Link>
+                </li>
+              </React.Fragment>
             ))}
           </ul>
         </div>

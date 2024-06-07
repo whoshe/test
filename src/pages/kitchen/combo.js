@@ -63,47 +63,44 @@ export default function Combo() {
         <div className='p-6'>
           <h2 className='text-neutral-400 font-bold'>실험실에 오신 것을 환영합니다.</h2>
         </div>
-        <Combobox as='div' value={selectedPerson} onChange={setSelectedPerson}>
+
+        <Combobox value={selectedPerson} onChange={setSelectedPerson}>
           {/* 검색어 입력  */}
-          <form className='w-full'>
-            <div className='relative lg:my-2'>
-              <Combobox.Input
-                type='search'
-                onChange={(event) => setQuery(event.target.value)}
-                className='input input-bordered text-lg lg:input-lg lg:text-2xl rounded-full w-full pl-10 pr-14 lg:pl-12 lg:pr-20 font-medium shadow'
-              />
-              <button className='absolute right-0 top-1/2 -translate-y-1/2 btn lg:btn-lg btn-ghost text-primary text-lg lg:text-xl rounded-full'>
-                검색
-              </button>
-              {/** 확대경 아이콘 */}
-              <div className='absolute left-3 top-1/2 -translate-y-1/2'>
-                <MagnifyingGlassIcon className='w-5 lg:w-6' />
-              </div>
+          <div className='relative lg:my-2'>
+            <Combobox.Input
+              type='search'
+              onChange={(event) => setQuery(event.target.value)}
+              className='input input-bordered text-lg lg:input-lg lg:text-2xl rounded-full w-full pl-10 pr-14 lg:pl-12 lg:pr-20 font-medium shadow'
+            />
+            <button className='absolute right-0 top-1/2 -translate-y-1/2 btn lg:btn-lg btn-ghost text-primary text-lg lg:text-xl rounded-full'>
+              검색
+            </button>
+            {/** 확대경 아이콘 */}
+            <div className='absolute left-3 top-1/2 -translate-y-1/2'>
+              <MagnifyingGlassIcon className='w-5 lg:w-6' />
             </div>
-          </form>
+          </div>
           {/* 검색어 제안  */}
           <Combobox.Options
             static
             tabIndex={0}
             className='container max-w-2xl z-[3] shadow bg-base-200 left-0 right-0 rounded-3xl'
           >
-            <div className='py-4'>
-              {filteredPeople.map((person) => (
-                <Combobox.Option key={person} value={person}>
-                  {({ active }) => (
-                    <div className={`${active && 'bg-base-300'} flex items-center`}>
-                      <div className='w-12 text-center justify-end items-center text-3xl font-bold'>
-                        1
-                      </div>
-                      <div className='flex flex-col p-1'>
-                        <div className='text-lg md:text-xl'>{person}</div>
-                        <div className='text-sm md:text-base md:text-md text-neutral-400'>설명</div>
-                      </div>
+            {filteredPeople.map((person) => (
+              <Combobox.Option key={person} value={person}>
+                {({ active }) => (
+                  <div className={`${active && 'bg-base-300'} flex items-center`}>
+                    <div className='w-12 text-center justify-end items-center text-3xl font-bold'>
+                      1
                     </div>
-                  )}
-                </Combobox.Option>
-              ))}
-            </div>
+                    <div className='flex flex-col p-1'>
+                      <div className='text-lg md:text-xl'>{person}</div>
+                      <div className='text-sm md:text-base md:text-md text-neutral-400'>설명</div>
+                    </div>
+                  </div>
+                )}
+              </Combobox.Option>
+            ))}
           </Combobox.Options>
         </Combobox>
       </section>

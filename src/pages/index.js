@@ -9,7 +9,7 @@ export default function Root() {
       <KitchenHeader />
       {/* 환영 인사 */}
       <section className='card w-full bg-base-100 shadow-md'>
-        <div class='p-4 card-body'>
+        <div className='p-4 card-body'>
           <Welcome name='남반장' />
           <h3 className='text-xl'>연습장에 오신 것을 환영합니다.</h3>
         </div>

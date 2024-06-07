@@ -132,7 +132,7 @@ export default function Input() {
                 <div className='mt-2'>
                   <div>
                     <label className='inline-flex items-center'>
-                      <input className='form-checkbox' type='checkbox' checked />
+                      <input className='form-checkbox' type='checkbox' defaultChecked />
                       <span className='ml-2'>Option 1</span>
                     </label>
                   </div>
@@ -158,7 +158,7 @@ export default function Input() {
                       <input
                         className='form-radio'
                         type='radio'
-                        checked
+                        defaultChecked
                         name='radio-direct'
                         value='1'
                       />

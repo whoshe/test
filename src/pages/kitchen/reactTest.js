@@ -49,7 +49,7 @@ function Welcome({ name }) {
         </section>
         <div className='text-center'>
           <h3 className='text-xl'>QR 코드를 스캔하세요.</h3>
-          <div class='mockup-phone'>
+          <div className='mockup-phone'>
             <div className='camera'></div>
             <div className='display'>
               <div className='artboard artboard-demo phone-1'>
@@ -275,7 +275,7 @@ export default function ReactTest() {
       <section className='p-4'>
         <h2 className='text-2xl font-bold'>리액트</h2>
         <Welcome name='남반장' />
-        <p class='my-2 text-lg text-gray-500'>Counters that update separately.</p>
+        <p className='my-2 text-lg text-gray-500'>Counters that update separately.</p>
         <article className='artboard-demo p-4'>
           <ul className='m-4'>
             <li>
@@ -300,7 +300,7 @@ export default function ReactTest() {
         </article>
       </section>
       <section className='p-4'>
-        <p class='my-2 text-lg text-gray-500'>과일 테이블 만들기</p>
+        <p className='my-2 text-lg text-gray-500'>과일 테이블 만들기</p>
         <article className='artboard-demo p-4'>
           <FilterableProductTable products={PRODUCTS} />
         </article>
