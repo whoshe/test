@@ -89,7 +89,7 @@ export default function Combo() {
             {filteredPeople.map((person) => (
               <Combobox.Option key={person} value={person}>
                 {({ active }) => (
-                  <div className={`${active && 'bg-base-300'} flex items-center`}>
+                  <div className={`${active && 'bg-neutral-300'} flex items-center`}>
                     <div className='w-12 text-center justify-end items-center text-3xl font-bold'>
                       1
                     </div>
