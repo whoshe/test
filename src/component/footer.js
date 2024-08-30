@@ -1,23 +1,23 @@
 import { CustomPlaceholder } from 'react-placeholder-image'
+import BiOrigin from '/public/img/logo-origin.svg'
 
 export default function Footer() {
   return (
     <>
-      <footer className='bg-gradient-to-b from-base-100 to-green-200 dark:to-green-800 p-4 py-16 '>
+      <footer className='bg-gradient-to-b from-base-100 to-green-100 dark:to-green-800 p-4 py-16'>
         <div className='footer max-md:footer-center mx-auto max-w-7xl gap-6'>
           {/* Footer */}
           <nav className='grid grid-flow-col gap-4 items-center text-lg text-neutral-400'>
-            <button className='btn btn-ghost flex flex-nowrap text-lg max-sm:hidden'>
-              <figure className='avatar'>
-                <div className='w-6 rounded-full'>
-                  <CustomPlaceholder
-                    className='max-w-sm rounded-lg shadow-2xl'
-                    width={32}
-                    height={32}
-                  />
-                </div>
+            <button className='btn btn-sm max-sm:btn-square btn-ghost text-lg'>
+              <figure>
+                <BiOrigin
+                  width={16}
+                  height={16}
+                  className='w-8 h-8 fill-current'
+                  alt='Bookshopmap Symbol Origin'
+                />
               </figure>
-              동네서점
+              <span className='max-sm:hidden'>동네서점</span>
             </button>
             <a className='link link-hover '>About us</a>
             <a className='link link-hover'>Contact</a>
