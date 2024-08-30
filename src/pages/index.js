@@ -33,6 +33,7 @@ function Welcome({ name }) {
 export default function Root() {
   return (
     <>
+      {/** 머리글 */}
       <KitchenHeader />
       <div className='container mx-auto grid grid-flow-row gap-4'>
         <section className='card w-full bg-base-100 shadow-md'>
