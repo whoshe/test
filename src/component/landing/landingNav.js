@@ -77,7 +77,7 @@ export default function Nav() {
           <li>
             <details>
               <summary>바로가기</summary>
-              <ul tabIndex='0' className='bg-base-200 dropdown-content w-80 glass'>
+              <ul tabIndex='0' className='bg-base-200 dropdown-content w-80 '>
                 <li>
                   <Link href='https://www.bookshopmap.com'>홈</Link>
                 </li>

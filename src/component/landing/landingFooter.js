@@ -6,10 +6,14 @@ import Twitter from '/public/img/icons/twitter.svg'
 import Instagram from '/public/img/icons/instagram.svg'
 
 export default function Footer() {
+  const date = new Date()
+  const year = date.getFullYear()
+  const short_year = year.toString().substr(-2)
+
   return (
     <>
       <footer className='bg-gradient-to-b from-base-100 to-green-200 dark:to-green-800 p-4 py-16 '>
-        {/* 바닥글 */}{' '}
+        {/* 바닥글 */}
         <nav className='flex flex-wrap items-center justify-center py-8 text-neutral-400'>
           {/* 탐색 */}
           <Link href='https://www.dongneseojeom.com' className='btn btn-sm btn-ghost'>
@@ -99,7 +103,7 @@ export default function Footer() {
               className='hover:text-primary'
               rel='noopener'
             >
-              Copyright © 2015-{new Date().getFullYear()} Dongneseojeom Inc. All right reserved
+              Copyright © 2015-{short_year} Dongneseojeom Inc. All right reserved
             </Link>
           </copyright>
         </aside>
