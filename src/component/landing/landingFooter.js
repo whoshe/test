@@ -1,73 +1,107 @@
-import { CustomPlaceholder } from 'react-placeholder-image'
+import Link from 'next/link'
+import Script from 'next/script'
+import BiOrigin from '/public/img/logo-origin.svg'
+import Youtube from '/public/img/icons/youtube.svg'
+import Twitter from '/public/img/icons/twitter.svg'
+import Instagram from '/public/img/icons/instagram.svg'
 
 export default function Footer() {
   return (
     <>
       <footer className='bg-gradient-to-b from-base-100 to-green-200 dark:to-green-800 p-4 py-16 '>
+        {/* 바닥글 */}{' '}
+        <nav className='flex flex-wrap items-center justify-center py-8 text-neutral-400'>
+          {/* 탐색 */}
+          <Link href='https://www.dongneseojeom.com' className='btn btn-sm btn-ghost'>
+            회사소개
+          </Link>
+          <Link href='https://www.bookshopmap.com/terms-ko' className='btn btn-sm btn-ghost'>
+            이용약관
+          </Link>
+          <Link href='https://www.bookshopmap.com/privacy-ko' className='btn btn-sm btn-ghost'>
+            개인정보보호
+          </Link>
+          <Link href='https://market.bookshopmap.com/delivery-ko' className='btn btn-sm btn-ghost'>
+            배송및환불
+          </Link>
+        </nav>
         <div className='footer max-md:footer-center mx-auto max-w-7xl gap-6'>
-          {/* Footer */}
-          <nav className='grid grid-flow-col gap-4 items-center text-lg text-neutral-400'>
-            <button className='btn btn-ghost flex flex-nowrap text-lg max-sm:hidden'>
-              <figure className='avatar'>
-                <div className='w-6 rounded-full'>
-                  <CustomPlaceholder
-                    className='max-w-sm rounded-lg shadow-2xl'
-                    width={32}
-                    height={32}
-                  />
-                </div>
-              </figure>
-              동네서점
-            </button>
-            <a className='link link-hover '>About us</a>
-            <a className='link link-hover'>Contact</a>
-            <a className='link link-hover'>Jobs</a>
-            <a className='link link-hover'>Press kit</a>
-          </nav>
-          <nav className='justify-self-center md:place-self-center md:justify-self-end'>
-            <div className='grid grid-flow-col gap-4'>
-              {/* Nav */}
-              <a>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  className='fill-neutral-400'
-                >
-                  <path d='M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z'></path>
-                </svg>
-              </a>
-              <a>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  className='fill-neutral-400'
-                >
-                  <path d='M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z'></path>
-                </svg>
-              </a>
-              <a>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  className='fill-neutral-400'
-                >
-                  <path d='M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z'></path>
-                </svg>
-              </a>
+          {/** 연락처 */}
+          <contact className='container mx-auto flex max-sm:flex-col justify-center lg:justify-between gap-4'>
+            <div className='flex items-center lg:grow'>
+              {/** 웹사이트 */}
+              <Link
+                href='https://www.bookshopmap.com'
+                className='btn btn-sm btn-ghost text-xl text-neutral-400'
+              >
+                <BiOrigin width={16} height={16} className='w-8 h-8 fill-current' />
+                동네서점
+              </Link>
+              <span className='hidden lg:block text-neutral-400'>
+                함께 만드는 동네서점 지도 <p />
+                데이터 및 콘텐츠의 저작권은 각 해당 창작자 또는 제보자, 주식회사 동네서점에
+                있습니다.
+              </span>
             </div>
-          </nav>
+
+            <div className='flex flex-wrap items-center justify-center gap-4'>
+              {/** 소셜미디어 채널 구독하기 */}
+              <Link href='https://www.instagram.com/bookshopmap'>
+                <Instagram width={24} height={24} className='w-6 h-6 text-neutral-400' />
+              </Link>
+              <Link href='https://www.twitter.com/bookshopmap'>
+                <Twitter width={24} height={24} className='w-6 h-6 text-neutral-400' />
+              </Link>
+              <Link href='https://www.youtube.com/@bookshopmap'>
+                <Youtube width={24} height={24} className='w-6 h-6 text-neutral-400' />
+              </Link>
+
+              {/** 카카오톡 채널 추가하기 */}
+              <div
+                className=''
+                id='kakao-talk-channel-add-button'
+                data-channel-public-id='_xeLPbC'
+                data-size='small'
+                data-support-multiple-densities='true'
+              ></div>
+
+              <Script>
+                {`            
+              window.kakaoAsyncInit = function () {
+              Kakao.Channel.createAddChannelButton({
+                container: "#kakao-talk-channel-add-button",
+              });
+            };
+
+            (function (d, s, id) {
+              var js,
+                fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s);
+              js.id = id;
+              js.src =
+                "https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.channel.min.js";
+              js.integrity =
+                "sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN";
+              js.crossOrigin = "anonymous";
+              fjs.parentNode.insertBefore(js, fjs);
+            })(document, "script", "kakao-js-sdk");
+            `}
+              </Script>
+            </div>
+          </contact>
         </div>
         <aside className='grid-flow-col text-center items-center justify-self-center lg:place-self-center lg:justify-self-start my-6'>
-          {/* Copyright */}
-          <p className='text-neutral-400'>
-            Copyright © 2015-{new Date().getFullYear()} Dongneseojeom Inc. All right reserved
-          </p>
+          {/* 저작권 */}
+          <copyright className='text-neutral-400'>
+            <Link
+              href='https://www.dongneseojeom.com'
+              className='hover:text-primary'
+              rel='noopener'
+            >
+              Copyright © 2015-{new Date().getFullYear()} Dongneseojeom Inc. All right reserved
+            </Link>
+          </copyright>
         </aside>
       </footer>
     </>
