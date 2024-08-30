@@ -65,7 +65,7 @@ export default function Footer() {
                 data-support-multiple-densities='true'
               ></div>
 
-              <Script>
+              <Script id='kakao-talk-channel-add-button'>
                 {`            
               window.kakaoAsyncInit = function () {
               Kakao.Channel.createAddChannelButton({
