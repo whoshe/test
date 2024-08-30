@@ -1,8 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+// const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: ['./src/**/*.{html,js,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: [
+          'var(--font-pretendard)',
+          // 'Pretendard Variable',
+          // 'Pretendard',
+          ...defaultTheme.fontFamily.sans,
+        ],
+      },
+    },
   },
   plugins: [require('daisyui'), require('@tailwindcss/typography')],
   daisyui: {
