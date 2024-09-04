@@ -26,9 +26,9 @@ export default function Nav() {
             <Link href='https://www.bookshopmap.com'>홈</Link>
           </li>
           <li>
-            <Link href='#benefits'>
+            <Link href='#steps'>
               <span className='lg:hidden'>혜택</span>
-              <span className='hidden lg:inline'>제공 혜택</span>
+              <span className='hidden lg:inline'>일정</span>
             </Link>
           </li>
           <li>
