@@ -114,7 +114,7 @@ export default function Landing() {
                     <p className='text-4xl'>{k + 1}</p>
                   </div>
                 </div>
-                <div className='card-body  items-center text-center'>
+                <div className='card-body items-center text-center'>
                   <p className='text-primary'>{i.icon}</p>
                   <p className='mt-2'> {i.description}</p>
                 </div>
@@ -125,7 +125,7 @@ export default function Landing() {
       </section>
       <section id='features' className='container mx-auto max-w-7xl py-20'>
         {/* Featured Section... */}
-        <h2 className='text-3xl mt-12 text-center font-bold'>주요 특징</h2>
+        <h2 className='text-3xl mt-12 text-center font-bold'>특징</h2>
         <h3 className='text-xl text-center'>Features</h3>
         <div className='grid grid-flow-row place-items-center mt-24 gap-8'>
           {featuresData.map((s, k) => {
