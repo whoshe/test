@@ -15,8 +15,8 @@ export default function Hero() {
             className='mx-auto rounded-full grayscale hover:grayscale-0'
             alt='© 완벽한 날들 from 2017 그림만화전'
           />
-          <figcaption className='absolute text-neutral-400 text-center text-xs bottom-6 w-full'>
-            2017 동네서점 그림만화전 © 완벽한날들
+          <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
+            © 완벽한날들
           </figcaption>
         </figure>
         <div>
@@ -33,10 +33,10 @@ export default function Hero() {
               지금 신청하기
             </Link>
             <Link
-              href='https://www.bookshopmap.com/news/campaign'
+              href='https://www.bookshopmap.com/news/main_ads'
               className='btn btn-ghost text-lg'
             >
-              지난 캠페인
+              지난 광고
             </Link>
           </p>
         </div>
