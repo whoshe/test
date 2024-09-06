@@ -103,7 +103,7 @@ export default function Landing() {
     <>
       <section id='steps' className='mx-auto max-w-7xl py-20 mt-20'>
         {/* Steps Section */}
-        <h2 className='text-3xl text-center font-bold'>참여 방법</h2>
+        <h2 className='text-3xl text-center font-bold'>일정</h2>
         <h3 className='text-xl text-center'>Steps</h3>
         <div className='grid mt-24 md:grid-cols-3 grid-cols-1 gap-8'>
           {stepsData.map((i, k) => {
@@ -156,9 +156,9 @@ export default function Landing() {
           })}
         </div>
       </section>
-      <section className='mx-auto max-w-7xl py-20'>
+      <section id='testimonials' className='mx-auto max-w-7xl py-20'>
         {/* Testimonials Section... */}
-        <h1 className='text-3xl  text-center font-bold'>추천의 말</h1>
+        <h1 className='text-3xl  text-center font-bold'>후기</h1>
         <h3 className='text-xl text-center'>Testimonials</h3>
         <div className='grid mt-24 md:grid-cols-3 grid-cols-1 gap-8'>
           {testimonialsData.map((t, k) => {
@@ -184,24 +184,31 @@ export default function Landing() {
       </section>{' '}
       <section id='faq' className='container mx-auto max-w-7xl py-20'>
         {/* Frequently asked question */}
-        <h2 className='text-3xl mt-12 text-center font-bold'>자주 묻는 질문</h2>
-        <h3 className='text-xl text-center'>
+        <h2 className='text-3xl mt-12 text-center font-bold'>질문</h2>
+        <h3 className='text-xl text-center'>FAQ</h3>
+
+        <p className='text-center mt-12 mb-12 text-xl'>
           더 궁금한 점은{' '}
           <Link
             href='https://www.bookshopmap.com/report/inquiry'
             className='link hover:text-primary'
           >
-            문의하기
+            제보하기로 문의
           </Link>
-          로 연락해주세요.
-        </h3>
+          해주세요.
+        </p>
+
         <accordion>
           <ul className='bg-base-200 rounded-3xl mt-24'>
             {faqData.map((f, k) => {
               return (
                 <>
                   <li key={k} className='collapse collapse-arrow'>
-                    <input type='radio' name='my-accordion' />
+                    <input
+                      type='radio'
+                      name='my-accordion'
+                      defaultChecked={k == 0 ? 'checked' : ''}
+                    />
                     <div className='collapse-title text-lg font-bold'>{f.question}</div>
                     <div className='collapse-content'>
                       <p className='p-4 mb-4 text-lg'>{f.answer}</p>
@@ -213,9 +220,9 @@ export default function Landing() {
           </ul>
         </accordion>
       </section>
-      <section className='mx-auto max-w-7xl py-20'>
+      <section id='plans' className='mx-auto max-w-7xl py-20'>
         {/* Plan Section... */}
-        <h2 className='text-3xl  text-center font-bold'>가격 정책</h2>
+        <h2 className='text-3xl  text-center font-bold'>가격</h2>
         <h3 className='text-xl text-center'>Plans</h3>
         <Plans />
       </section>
@@ -223,8 +230,8 @@ export default function Landing() {
         <h2 className='text-3xl text-center font-bold'>곧 마감!</h2>
         <p className='text-lg text-center'>Closing soon!</p>
         <Link href='/start-designing'>
-          <button className='btn mt-12 btn-primary btn-block inline-block px-12 normal-case text-lg'>
-            신청하기
+          <button className='btn mt-12 btn-primary btn-block inline-block px-12 normal-case text-lg text-white'>
+            지금 신청하기
           </button>
         </Link>
       </section>

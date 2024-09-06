@@ -30,7 +30,7 @@ export default function Hero() {
               className='btn btn-primary text-white text-lg'
               href='https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform'
             >
-              지금 신청하기
+              신청하기
             </Link>
             <Link
               href='https://www.bookshopmap.com/news/main_ads'
