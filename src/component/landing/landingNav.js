@@ -79,7 +79,7 @@ export default function Nav() {
       {/** 모바일 드롭다운 메뉴 */}
       <div className='dropdown md:hidden z-[3]'>
         <ul className='dropdown-end menu text-lg lg:menu-lg menu-horizontal'>
-          <li>
+          <li key='0'>
             <details>
               <summary>바로가기</summary>
               <ul tabIndex='0' className='bg-base-200 dropdown-content w-80 '>

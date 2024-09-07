@@ -105,10 +105,10 @@ export default function Landing() {
         {/* Steps Section */}
         <h2 className='text-3xl text-center font-bold'>일정</h2>
         <h3 className='text-xl text-center'>Steps</h3>
-        <div className='grid mt-24 md:grid-cols-3 grid-cols-1 gap-8'>
+        <ul className='grid mt-24 md:grid-cols-3 grid-cols-1 gap-8'>
           {stepsData.map((i, k) => {
             return (
-              <div key={k} className='card w-full bg-base-100 border hover:bg-base-200 shadow-xl'>
+              <li key={k} className='card w-full bg-base-100 border hover:bg-base-200 shadow-xl'>
                 <div className='grid -mt-4 place-items-center'>
                   <div className='w-16 h-16  rounded-full  bg-neutral-500 text-base-100 flex font-bold justify-center items-center'>
                     <p className='text-4xl'>{k + 1}</p>
@@ -118,19 +118,19 @@ export default function Landing() {
                   <p className='text-primary'>{i.icon}</p>
                   <p className='mt-2'> {i.description}</p>
                 </div>
-              </div>
+              </li>
             )
           })}
-        </div>
+        </ul>
       </section>
       <section id='features' className='container mx-auto max-w-7xl py-20'>
         {/* Featured Section... */}
         <h2 className='text-3xl mt-12 text-center font-bold'>특징</h2>
         <h3 className='text-xl text-center'>Features</h3>
-        <div className='grid grid-flow-row place-items-center mt-24 gap-8'>
+        <ul className='grid grid-flow-row place-items-center mt-24 gap-8'>
           {featuresData.map((s, k) => {
             return (
-              <div
+              <li
                 key={k}
                 className='grid  md:grid-cols-2 grid-cols-1 w-full gap-8 place-items-center'
                 dir={k % 2 ? 'rtl' : ''}
@@ -151,19 +151,19 @@ export default function Landing() {
                     <button className='btn btn-primary mt-8 px-8 normal-case'>{s.button}</button>
                   </Link>
                 </div>
-              </div>
+              </li>
             )
           })}
-        </div>
+        </ul>
       </section>
       <section id='testimonials' className='mx-auto max-w-7xl py-20'>
         {/* Testimonials Section... */}
         <h1 className='text-3xl  text-center font-bold'>후기</h1>
         <h3 className='text-xl text-center'>Testimonials</h3>
-        <div className='grid mt-24 md:grid-cols-3 grid-cols-1 gap-8'>
+        <ul className='grid mt-24 md:grid-cols-3 grid-cols-1 gap-8'>
           {testimonialsData.map((t, k) => {
             return (
-              <div key={k} className='card w-full bg-base-100 hover:bg-base-200 shadow-xl border'>
+              <li key={k} className='card w-full bg-base-100 hover:bg-base-200 shadow-xl border'>
                 <figure className='px-10 pt-10'>
                   <Image
                     src={t.profilePic}
@@ -177,10 +177,10 @@ export default function Landing() {
                   <p className='text-lg'>{t.text}</p>
                   <p className='text-neutral-400'>-{t.name}</p>
                 </div>
-              </div>
+              </li>
             )
           })}
-        </div>
+        </ul>
       </section>{' '}
       <section id='faq' className='container mx-auto max-w-7xl py-20'>
         {/* Frequently asked question */}
@@ -202,19 +202,17 @@ export default function Landing() {
           <ul className='bg-base-200 rounded-3xl mt-24'>
             {faqData.map((f, k) => {
               return (
-                <>
-                  <li key={k} className='collapse collapse-arrow'>
-                    <input
-                      type='radio'
-                      name='my-accordion'
-                      defaultChecked={k == 0 ? 'checked' : ''}
-                    />
-                    <div className='collapse-title text-lg font-bold'>{f.question}</div>
-                    <div className='collapse-content'>
-                      <p className='p-4 mb-4 text-lg'>{f.answer}</p>
-                    </div>
-                  </li>
-                </>
+                <li key={k} className='collapse collapse-arrow'>
+                  <input
+                    type='radio'
+                    name='my-accordion'
+                    defaultChecked={k == 0 ? 'checked' : ''}
+                  />
+                  <div className='collapse-title text-lg font-bold'>{f.question}</div>
+                  <div className='collapse-content'>
+                    <p className='p-4 mb-4 text-lg'>{f.answer}</p>
+                  </div>
+                </li>
               )
             })}
           </ul>
