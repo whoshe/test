@@ -22,38 +22,38 @@ export default function Nav() {
       </Link>
       <div className='grow'>
         <ul className='dropdown menu text-lg menu-horizontal hidden md:flex'>
-          <li>
+          <li key='1'>
             <Link href='https://www.bookshopmap.com'>홈</Link>
           </li>
-          <li>
+          <li key='2'>
             <Link href='#steps'>
               일정
               {/* <span className='lg:hidden'>일정</span> */}
               {/* <span className='hidden lg:inline'>캠페인 일정</span> */}
             </Link>
           </li>
-          <li>
+          <li key='3'>
             <Link href='#features'>
               특징
               {/* <span className='lg:hidden'>혜택</span>
               <span className='hidden lg:inline'>제공 혜택</span> */}
             </Link>
           </li>
-          <li>
+          <li key='4'>
             <Link href='#testimonials'>
               후기
               {/* <span className='lg:hidden'>후기</span>
               <span className='hidden lg:inline'>고객 후기</span> */}
             </Link>
           </li>
-          <li>
+          <li key='5'>
             <Link href='#faq'>
               FAQ
               {/* <span className='lg:hidden'>질문</span>
               <span className='hidden lg:inline'>자주묻는질문</span> */}
             </Link>
           </li>
-          <li>
+          <li key='6'>
             <Link href='#plans'>
               가격
               {/* <span className='lg:hidden'>가격</span>
@@ -83,22 +83,22 @@ export default function Nav() {
             <details>
               <summary>바로가기</summary>
               <ul tabIndex='0' className='bg-base-200 dropdown-content w-80 '>
-                <li>
+                <li key='1'>
                   <Link href='https://www.bookshopmap.com'>홈</Link>
                 </li>
-                <li>
+                <li key='2'>
                   <Link href='#steps'>일정</Link>
                 </li>
-                <li>
+                <li key='3'>
                   <Link href='#features'>특징</Link>
                 </li>
-                <li>
+                <li key='4'>
                   <Link href='#testimonials'>후기</Link>
                 </li>
-                <li>
+                <li key='5'>
                   <Link href='#faq'>FAQ</Link>
                 </li>
-                <li>
+                <li key='6'>
                   <Link href='#plans'>가격</Link>
                 </li>
               </ul>
