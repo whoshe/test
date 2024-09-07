@@ -37,7 +37,7 @@ export default function Header() {
                 </figure>
               </div>
               <ul
-                tabindex='0'
+                tabIndex='0'
                 className='menu menu-lg dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-80 shadow-lg'
               >
                 <li>
