@@ -28,22 +28,22 @@ export default function Header() {
             </div>
           </div>
           <div className='flex-none'>
-            <div class='dropdown dropdown-end'>
+            <div className='dropdown dropdown-end'>
               <div tabIndex='0' role='button' className='btn btn-ghost btn-circle avatar'>
                 <figure className='avatar online placeholder'>
-                  <div class='bg-neutral-400 w-10 rounded-full hover:ring ring-primary ring-offset-2'>
+                  <div className='bg-neutral-400 w-10 rounded-full hover:ring ring-primary ring-offset-2'>
                     <span className='text-2xl text-neutral-content'>B</span>
                   </div>
                 </figure>
               </div>
               <ul
                 tabindex='0'
-                class='menu menu-lg dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-80 shadow-lg'
+                className='menu menu-lg dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-80 shadow-lg'
               >
                 <li>
-                  <a class='justify-between'>
+                  <a className='justify-between'>
                     Profile
-                    <span class='badge'>New</span>
+                    <span className='badge'>New</span>
                   </a>
                 </li>
                 <li>
