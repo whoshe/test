@@ -9,7 +9,7 @@ export default function Header() {
             메뉴
           </label>
           <Link href='/admin/' className='btn btn-ghost'>
-            관리자 집으로
+            광장으로
           </Link>
         </div>
         <ul className='flex'>

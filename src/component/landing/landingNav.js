@@ -27,32 +27,37 @@ export default function Nav() {
           </li>
           <li>
             <Link href='#steps'>
-              <span className='lg:hidden'>혜택</span>
-              <span className='hidden lg:inline'>일정</span>
+              일정
+              {/* <span className='lg:hidden'>일정</span> */}
+              {/* <span className='hidden lg:inline'>캠페인 일정</span> */}
             </Link>
           </li>
           <li>
-            <Link href='#campaign'>
-              <span className='lg:hidden'>일정</span>
-              <span className='hidden lg:inline'>캠페인 일정</span>
+            <Link href='#features'>
+              특징
+              {/* <span className='lg:hidden'>혜택</span>
+              <span className='hidden lg:inline'>제공 혜택</span> */}
             </Link>
           </li>
           <li>
-            <Link href='#review'>
-              <span className='lg:hidden'>후기</span>
-              <span className='hidden lg:inline'>고객 후기</span>
+            <Link href='#testimonials'>
+              후기
+              {/* <span className='lg:hidden'>후기</span>
+              <span className='hidden lg:inline'>고객 후기</span> */}
             </Link>
           </li>
           <li>
             <Link href='#faq'>
-              <span className='lg:hidden'>FAQ</span>
-              <span className='hidden lg:inline'>자주묻는질문</span>
+              FAQ
+              {/* <span className='lg:hidden'>질문</span>
+              <span className='hidden lg:inline'>자주묻는질문</span> */}
             </Link>
           </li>
           <li>
-            <Link href='https://market.bookshopmap.com/market-category/ads'>
-              <span className='lg:hidden'>가격</span>
-              <span className='hidden lg:inline'>가격 정책</span>
+            <Link href='#plans'>
+              가격
+              {/* <span className='lg:hidden'>가격</span>
+              <span className='hidden lg:inline'>가격 정책</span> */}
             </Link>
           </li>
         </ul>
@@ -82,19 +87,19 @@ export default function Nav() {
                   <Link href='https://www.bookshopmap.com'>홈</Link>
                 </li>
                 <li>
-                  <Link href='#benefits'>제공 혜택</Link>
+                  <Link href='#steps'>일정</Link>
                 </li>
                 <li>
-                  <Link href='#campaign'>캠페인 일정</Link>
+                  <Link href='#features'>특징</Link>
                 </li>
                 <li>
-                  <Link href='#review'>고객 후기</Link>
+                  <Link href='#testimonials'>후기</Link>
                 </li>
                 <li>
-                  <Link href='#faq'>자주묻는질문</Link>
+                  <Link href='#faq'>FAQ</Link>
                 </li>
                 <li>
-                  <Link href='https://market.bookshopmap.com/market-category/ads'>가격 정책</Link>
+                  <Link href='#plans'>가격</Link>
                 </li>
               </ul>
             </details>
