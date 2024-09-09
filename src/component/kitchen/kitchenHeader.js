@@ -42,6 +42,7 @@ export default function KitchenHeader() {
             {items.map((item) => (
               <React.Fragment key={item.id}>
                 <li
+                  key={item.id}
                   onClick={() => {
                     router.push(item.path)
                   }}
