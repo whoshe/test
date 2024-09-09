@@ -22,8 +22,11 @@ export default function Nav() {
       </Link>
       <div className='grow'>
         <ul className='dropdown menu text-lg menu-horizontal hidden md:flex'>
-          <li key='1'>
+          <li key='0'>
             <Link href='https://www.bookshopmap.com'>홈</Link>
+          </li>
+          <li key='1'>
+            <Link href='#purpose'>목적</Link>
           </li>
           <li key='2'>
             <Link href='#steps'>
@@ -83,8 +86,11 @@ export default function Nav() {
             <details>
               <summary>바로가기</summary>
               <ul tabIndex='0' className='bg-base-200 dropdown-content w-80 '>
-                <li key='1'>
+                <li key='0'>
                   <Link href='https://www.bookshopmap.com'>홈</Link>
+                </li>
+                <li key='1'>
+                  <Link href='#purpose'>목적</Link>
                 </li>
                 <li key='2'>
                   <Link href='#steps'>일정</Link>

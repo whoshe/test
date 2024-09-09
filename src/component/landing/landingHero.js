@@ -16,14 +16,15 @@ export default function Hero() {
             alt='© 완벽한 날들 from 2017 그림만화전'
           />
           <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
-            © 완벽한날들
+            @완벽한날들
           </figcaption>
         </figure>
         <div>
           <h1 className='text-3xl font-bold'>신간알림이 도착했어요.</h1>
           <p className='py-6 text-lg'>
-            독립서점 책방지기와 창작자, 독자의 받은 편지함으로 찾아가는 문화예술 이메일 광고
-            서비스입니다.
+            동네서점 신간알림이란 독립서점 책방지기와 창작자, 독자의 받은 편지함으로 찾아가는
+            문화예술 이메일 광고 서비스입니다. 창작자라면 새 책과 문구에서, 책시장까지 지금
+            알리세요.
           </p>
           <p>
             <Link
