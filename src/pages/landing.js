@@ -299,7 +299,7 @@ const featuresData = [
   {
     subject: '독자와 더 가까워지도록',
     description:
-      '전국 7백여 책방지기를 포함 3.4천여 소식지 구독자 및 2~30대 가치 소비와 공유에 적극적인 1.8만여 인스타그램 팔로워 대상으로, 100자 이내의 짧은 기사로 직거래 또는 도매 거래처로 주문, 신청서 URL 등 원하는 방식의 연결을 지원합니다 (단독은 500자 이상 긴 기사 지원)',
+      '전국 7백여 책방지기를 포함 3.4천여 소식지 구독자 및 2~30대 가치 소비와 공유에 적극적인 1.8만여 인스타그램 팔로워 총 2.2만여 명의 이웃을 발견하세요.',
     image: '/img/photos/gaeddong.jpg',
     alt: '@개똥이네책놀이터',
     button: '',
@@ -308,9 +308,9 @@ const featuresData = [
   {
     subject: '문화예술 창작자와 함께합니다',
     description:
-      '더 많은 창작자가 합리적인 가격에 최대의 광고 효과를 누리도록, 하나의 광고판을 여럿이 공유하고 불필요한 초안 감수와 결과 보고 절차를 줄였죠. 이 결과로 광고 비용을 기존의 1/5로 낮췄습니다',
+      '창작자가 합리적인 가격에 더 많은 독자를 만나도록, 광고 수수료를 1/5로 낮췄어요. 하나의 광고판을 여럿이 공유하고, 불필요한 절차를 간소화한 결과입니다.',
     image: '/img/photos/yourtastefilm.jpg',
-    alt: '관객의취향@',
+    alt: '@관객의취향',
     button: '',
     link: 'https://www.bookshopmap.com',
   },
@@ -338,7 +338,7 @@ const faqData = [
   {
     question: 'Q. 신청서 제출하면 회신하나요? (선결제)',
     answer:
-      ' A. 신간알림은 신청서 제출 및 선결제를 완료해야 신청서 검토를 시작합니다. 캠페인의 모든 과정은 결제일을 시작 기준일로 해서, 총 14일(2주) 내외가 소요될 예정입니다.',
+      ' A. 신간알림은 신청서 제출 및 선결제를 완료해야 검토를 시작합니다. 캠페인의 모든 과정은 결제일을 시작 기준일로 해서, 총 14일(2주) 내외가 소요될 예정입니다.',
   },
   {
     question: 'Q. 캠페인 전후에 연락하나요? (기본 vs 단독)',
@@ -464,33 +464,63 @@ export default function Landing() {
             return (
               <li
                 key={k}
-                className='grid  md:grid-cols-2 grid-cols-1 w-full gap-8 place-items-center'
-                dir={k % 2 ? 'rtl' : ''}
+                className='grid grid-col-reverse md:grid-cols-2 grid-cols-1 w-full gap-8 place-items-center'
               >
-                <figure className='relative'>
-                  <Image
-                    width={360}
-                    height={480}
-                    loading='lazy'
-                    src={s.image}
-                    className='h-auto mx-auto rounded-full grayscale hover:grayscale-0'
-                    alt={s.alt}
-                  />
-                  <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
-                    {s.alt}
-                  </figcaption>
-                </figure>
-                <div className='text-center'>
-                  <h2 className='text-2xl  text-center leading-10 font-bold'>{s.subject}</h2>
-                  <p className='text-lg'>{s.description}</p>
-                  {s.button == '' ? (
-                    ''
-                  ) : (
-                    <Link href={s.link} className='btn btn-primary mt-8 px-8 normal-case'>
-                      {s.button}
-                    </Link>
-                  )}
-                </div>
+                {k % 2 ? (
+                  <>
+                    <figure className='relative'>
+                      <Image
+                        width={480}
+                        height={480}
+                        loading='lazy'
+                        src={s.image}
+                        className='h-auto mx-auto rounded-full grayscale hover:grayscale-0 w-96'
+                        alt={s.alt}
+                      />
+                      <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
+                        {s.alt}
+                      </figcaption>
+                    </figure>
+                    <div className='text-center'>
+                      <h2 className='text-2xl  text-center leading-10 font-bold'>{s.subject}</h2>
+                      <p className='text-lg'>{s.description}</p>
+                      {s.button == '' ? (
+                        ''
+                      ) : (
+                        <Link href={s.link} className='btn btn-primary mt-8 px-8 normal-case'>
+                          {s.button}
+                        </Link>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className='text-center'>
+                      <h2 className='text-2xl  text-center leading-10 font-bold'>{s.subject}</h2>
+                      <p className='text-lg'>{s.description}</p>
+                      {s.button == '' ? (
+                        ''
+                      ) : (
+                        <Link href={s.link} className='btn btn-primary mt-8 px-8 normal-case'>
+                          {s.button}
+                        </Link>
+                      )}
+                    </div>
+                    <figure className='relative order-1'>
+                      <Image
+                        width={480}
+                        height={480}
+                        loading='lazy'
+                        src={s.image}
+                        className='h-auto mx-auto rounded-full grayscale hover:grayscale-0 w-96'
+                        alt={s.alt}
+                      />
+                      <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
+                        {s.alt}
+                      </figcaption>
+                    </figure>
+                  </>
+                )}
               </li>
             )
           })}

@@ -13,7 +13,7 @@ export default function Hero() {
             height={640}
             src='/img/photos/hero-perfect-days.jpg'
             className='mx-auto rounded-full grayscale hover:grayscale-0'
-            alt='© 완벽한 날들 from 2017 그림만화전'
+            alt='@완벽한 날들'
           />
           <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
             @완벽한날들

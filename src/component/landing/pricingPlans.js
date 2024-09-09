@@ -3,7 +3,7 @@ import CheckIcon from '@heroicons/react/24/outline/CheckIcon'
 import Link from 'next/link'
 import { useDispatch, useSelector } from 'react-redux'
 
-const freePointers = ['사회적 의미 있는', '책 관련 행사예요', '광고를 교환해요', '기타']
+const freePointers = ['독립서점을 응원하는', '사회적 의미 있는', '광고를 교환해요', '기타']
 
 const advancePointers = [
   '100자 이내 짧은 기사',
@@ -49,10 +49,10 @@ function PricingPlans() {
             <h1 className='font-bold mt-4 text-4xl'>₩ 0</h1>
             <span>( - )</span>
             <Link
-              href=''
-              className='btn text-base !hover:text-white hover:bg-primary mt-8 w-full  btn-outline normal-case btn-disabled'
+              href='https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform'
+              className='btn text-base btn-outline !hover:text-white mt-8 w-full normal-case'
             >
-              기타 협업
+              협업 신청하기
             </Link>
 
             <ul className='text-left mt-4 text-lg'>
