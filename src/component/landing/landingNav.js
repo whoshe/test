@@ -67,7 +67,7 @@ export default function Nav() {
         </ul>
       </div>
 
-      <contact className='flex-wrap items-center justify-center gap-4 md:flex hidden'>
+      <contact className='flex-wrap items-center justify-center gap-4 md:flex hidden mr-4'>
         {/** 동네서점 채널 구독하기 */}
         <Link
           href='https://www.bookshopmap.com/newsletter'

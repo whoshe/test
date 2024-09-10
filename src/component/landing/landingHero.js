@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
           <p>
             <Link
-              className='btn btn-primary text-white text-lg'
+              className='btn btn-primary text-base-100 text-lg'
               href='https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform'
             >
               신청하기

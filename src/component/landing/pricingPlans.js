@@ -71,7 +71,7 @@ function PricingPlans() {
 
         <div className='card mt-6  bg-base-100 shadow-xl hover:shadow-2xl border'>
           <div className='card-body pt-12 pb-16 items-center  '>
-            <div className='badge text-base badge-primary absolute text-white mt-1 ml-1 left-2 top-2'>
+            <div className='badge text-base badge-primary absolute text-base-100 mt-1 ml-1 left-2 top-2'>
               가장 인기있는
             </div>
             <h3 className='card-title text-xl text-center'>기본</h3>

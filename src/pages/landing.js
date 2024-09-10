@@ -604,7 +604,7 @@ export default function Landing() {
         <h3 className='text-xl text-center'>매주 금요일 신청 및 결제를 마감합니다.</h3>
         <Link
           href='https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform'
-          className='btn mt-12 btn-primary btn-block normal-case text-lg text-white'
+          className='btn mt-12 btn-primary btn-block normal-case text-lg text-base-100'
         >
           지금 신청하기
         </Link>
