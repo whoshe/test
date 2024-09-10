@@ -6,24 +6,26 @@ export default function Hero() {
     <section className='hero'>
       {/* 표지 */}
       <div className='hero-content flex-col md:flex-row-reverse'>
-        <figure className='relative'>
-          <Image
-            priority
-            width={480}
-            height={640}
-            src='/img/photos/hero-perfect-days.jpg'
-            className='mx-auto rounded-full grayscale hover:grayscale-0'
-            alt='@완벽한 날들'
-          />
-          <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
-            @완벽한날들
-          </figcaption>
-        </figure>
-        <div>
+        <div className='flex justify-center lg:w-2/5'>
+          <figure className='relative'>
+            <Image
+              priority
+              width={480}
+              height={640}
+              src='/img/photos/hero-perfect-days.jpg'
+              className='justify-self-center rounded-full grayscale hover:grayscale-0 w-96'
+              alt='@완벽한 날들'
+            />
+            <figcaption className='absolute text-neutral-300 text-center text-xs bottom-6 w-full'>
+              @완벽한날들
+            </figcaption>
+          </figure>
+        </div>
+        <div className='lg:w-3/5'>
           <h1 className='text-3xl font-bold'>신간알림이 도착했어요.</h1>
           <p className='py-6 text-lg'>
             동네서점 신간알림이란 독립서점 책방지기와 창작자, 독자의 받은 편지함으로 찾아가는
-            문화예술 이메일 광고 서비스입니다. 창작자라면 새 책과 문구에서, 책시장까지 지금
+            문화예술 이메일 카탈로그 광고 서비스입니다. 창작자라면 새 책과 문구에서, 책시장까지 지금
             알리세요.
           </p>
           <p>

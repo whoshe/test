@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Youtube from '/public/img/icons/youtube.svg'
 import Twitter from '/public/img/icons/twitter.svg'
 import Instagram from '/public/img/icons/instagram.svg'
+import Newsletter from '/public/img/icons/mail.svg'
 
 export default function Nav() {
   return (
@@ -66,16 +67,35 @@ export default function Nav() {
         </ul>
       </div>
 
-      <contact className='flex-wrap items-center justify-center gap-4 md:flex'>
-        {/** 소셜미디어 채널 구독하기 */}
-        <Link className='hidden md:flex' href='https://www.instagram.com/bookshopmap'>
-          <Instagram width={24} height={24} className='hidden md:flex w-6 h-6 fill-current' />
+      <contact className='flex-wrap items-center justify-center gap-4 md:flex hidden'>
+        {/** 동네서점 채널 구독하기 */}
+        <Link
+          href='https://www.bookshopmap.com/newsletter'
+          className='tooltip tooltip-top'
+          data-tip='소식지'
+        >
+          <Newsletter width={24} height={24} className='w-7 h-7 ' />
         </Link>
-        <Link className='hidden md:flex' href='https://www.twitter.com/bookshopmap'>
-          <Twitter width={24} height={24} className='hidden md:flex w-6 h-6 fill-current' />
+        <Link
+          href='https://www.instagram.com/bookshopmap'
+          className='tooltip tooltip-top'
+          data-tip='인스타그램'
+        >
+          <Instagram width={24} height={24} className='w-6 h-6 ' />
         </Link>
-        <Link className='hidden md:flex' href='https://www.youtube.com/@bookshopmap'>
-          <Youtube width={24} height={24} className='hidden md:flex w-6 h-6 fill-current' />
+        <Link
+          href='https://www.twitter.com/bookshopmap'
+          className='tooltip tooltip-top'
+          data-tip='X 트위터'
+        >
+          <Twitter width={24} height={24} className='w-6 h-6 ' />
+        </Link>
+        <Link
+          href='https://www.youtube.com/@bookshopmap'
+          className='tooltip tooltip-top'
+          data-tip='유튜브'
+        >
+          <Youtube width={24} height={24} className='w-6 h-6 ' />
         </Link>
       </contact>
 

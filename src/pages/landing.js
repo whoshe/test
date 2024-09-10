@@ -346,12 +346,17 @@ const faqData = [
       ' A. 오직 단독 광고만 발행 전 초안 감수 및 발행 후 결과 보고서를 제공해요. 기본 광고는 캠페인 전후에 초안 내용을 미리 보거나 검토 및 조정 변경, 감수, 확정의 편집 과정부터 결과 보고까지 별도의 개별 연락을 하지 않습니다. 이메일 소식지 내 광고 집행 내용을 확인하려면, 매주 수요일에 정기 발행하는 동네서점 소식지를 미리 구독해주세요.',
   },
   {
-    question: 'Q. 무료 캠페인 협업할 수 있나요? (무료광고)',
+    question: 'Q. 캠페인 후 매출 얼마나 늘까요? (효과)',
     answer:
-      'A. 기타협업(무료) 광고 신청서를 작성 제출해주시면, 내용 검토에 따라 무료 광고를 지원할 수 있어요. 다만, 운영 기준에 미적합 시 별도의 통보 없이 집행 거절될 수 있어요.',
+      'A. 신간알림은 즉각적인 매출 증가 효과를 보장하지 않아요. 즉각적인 소비자 반응을 기대한다면 실망할 수 있습니다. 문화예술 상품의 소비자 반응은 상품의 성격과 내용, 창작자의 인지도 등에 따라 편차가 매우 큰 편입니다. 하지만 독립서점 책방지기 등 운영자와의 원활한 소통과 관계를 유지해나간다면, 장기적으로 좋은 반응을 얻게 될 겁니다.',
   },
   {
-    question: 'Q. 캠페인 거절이나 내용 편집은? (주의사항)',
+    question: 'Q. 캠페인 무료 지원이 가능할까요? (협업)',
+    answer:
+      'A. 협업광고(무료) 신청서를 작성 제출해주시면, 내용 검토에 따라 무료 광고를 지원할 수 있어요. 다만, 운영 기준에 미적합 시 별도의 통보 없이 집행 거절될 수 있어요.',
+  },
+  {
+    question: 'Q. 캠페인 거절 및 환불, 편집은? (주의사항)',
     answer:
       'A. 신청서 검토에 따라 운영 기준에 미적합 시 집행 거절되거나, 신청 내용의 일부를 편집 발행할 수 있어요. 광고 거절 시, 환불은 7일 이내에 조치합니다. 광고를 집행한 후에는 환불이 불가합니다.',
   },
@@ -359,11 +364,6 @@ const faqData = [
     question: 'Q. 세금계산서 발행 방법은? (계좌이체)',
     answer:
       ' A. 마켓에서 신용카드로 결제하면, 세금계산서가 필요 없어요. 또는 페이팔이나 직접 은행계좌로 이체 등 원하는 결제 방법을 선택할 수 있어요. 세금계산서는 보통 익월 10일(평일 기준)에 발행해드려요. ➊ 계좌이체 방식 결제 시: 입금자의 이름과 이메일 정보를 작성하고 결제해주세요. ➋ 입금계좌에 수수료 입금: KB국민은행 975901-00-040972 주식회사 동네서점 ➌ 세금계산서 발행 신청: 사업자등록증 사본과 이메일주소, 상품명을 이메일 support@bookshopmap.com로 보내주세요.',
-  },
-  {
-    question: 'Q. 캠페인 후 매출 얼마나 늘까요? (광고효과)',
-    answer:
-      'A. 신간알림은 즉각적인 매출 증가 효과를 보장하지 않아요. 즉각적인 소비자 반응을 기대한다면 실망할 수 있습니다. 문화예술 상품의 소비자 반응은 상품의 성격과 내용, 창작자의 인지도 등에 따라 편차가 매우 큰 편입니다. 하지만 독립서점 책방지기 등 운영자와의 원활한 소통과 관계를 유지해나간다면, 장기적으로 좋은 반응을 얻게 될 겁니다.',
   },
   {
     question: 'Q. 얼마나 많은 사람이 반응할까? (통계집계)',
@@ -374,6 +374,11 @@ const faqData = [
     question: 'Q. 캠페인 효과 더 높이는 방법은? (멤버십)',
     answer:
       'A. 1:다의 간접 소통 방식뿐만 아니라 전화 및 문자 메시지, 직접 방문 등 1:1 직접 소통 방식도 함께 병행해야 해요. 이 과정에서 기본 자세나 예절을 지키세요. 동네서점 멤버십 후원 회원이라면, 지도 상세페이지에서 독립서점 책방지기에게 지접 연락할 수 있는 이메일주소와 휴대전화번호 등 유료정보를 열람할 수 있으니 고려해보세요.',
+  },
+  {
+    question: 'Q. 수수료 수익은 어떻게 쓰이나요? (수익금)',
+    answer:
+      'A. 신간알림의 수익금은 동네서점 지도 서비스 개발과 운영을 위해 쓰입니다. 많은 관심과 응원 바라요!',
   },
 ]
 
@@ -430,7 +435,7 @@ export default function Landing() {
           <p className='text-center'>
             <Link
               href='https://www.bookshopmap.com'
-              className='hover:text-primary tooltip tooltip-bottom col-span-2'
+              className='hover:text-primary tooltip tooltip-top col-span-2'
               data-tip='동네서점 홈으로'
             >
               <label className='badge badge-outline'>공통</label> 동네서점 홈 메인 광고판에 노출
@@ -596,7 +601,7 @@ export default function Landing() {
       </section>
       <section className='mx-auto max-w-2xl py-40 px-4'>
         <h2 className='text-3xl text-center font-bold'>곧 마감!</h2>
-        <h3 className='text-xl text-center'>매주 금요일 신청 마감합니다.</h3>
+        <h3 className='text-xl text-center'>매주 금요일 신청 및 결제를 마감합니다.</h3>
         <Link
           href='https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform'
           className='btn mt-12 btn-primary btn-block normal-case text-lg text-white'
