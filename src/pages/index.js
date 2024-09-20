@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Layout from '@/component/layout'
 import KitchenHeader from '@/component/kitchen/kitchenHeader'
 import toast, { Toaster } from 'react-hot-toast'
-
+import { NextSeo } from 'next-seo'
 // 푸시 알림
 const notify = () =>
   // 푸시 알림: 성공
@@ -33,6 +33,13 @@ function Welcome({ name }) {
 export default function Root() {
   return (
     <>
+      <NextSeo
+        title='부엌'
+        openGraph={{
+          url: '',
+          images: [{ url: '' }],
+        }}
+      />
       {/** 머리글 */}
       <KitchenHeader />
       <div className='container mx-auto grid grid-flow-row gap-4'>

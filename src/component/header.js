@@ -17,12 +17,12 @@ export default function Header() {
           <div className='flex-1'>
             <div>
               <Link href='/' className='btn btn-ghost text-lg'>
-                광장
+                부엌
               </Link>
               <Link href='/landing' className='btn btn-ghost text-lg'>
-                착륙지
+                광고
               </Link>
-              <Link href='/admin/welcome' className='btn btn-ghost text-lg'>
+              <Link href='/admin' className='btn btn-ghost text-lg'>
                 관리실
               </Link>
             </div>

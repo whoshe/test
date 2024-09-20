@@ -3,7 +3,9 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID
 // 로컬 폰트
 import localFont from 'next/font/local'
 import Script from 'next/script'
-
+// import your default seo configuration
+import { DefaultSeo } from 'next-seo'
+import SEO from '../../seo.config'
 const pretendard = localFont({
   //   src: '../../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2',
   //   display: 'swap',
@@ -26,6 +28,7 @@ export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page)
   return (
     <>
+      <DefaultSeo {...SEO} />
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy='afterInteractive'
