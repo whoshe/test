@@ -12,7 +12,7 @@ export default function Header() {
             <figure>
               <BeakerIcon className='h-8 w-8' width={24} height={24} alt='Bookshopmap Lab' />
             </figure>
-            <span className='max-sm:hidden'>실험실</span>
+            <span className='max-sm:hidden'>연습장</span>
           </Link>
           <div className='flex-1'>
             <div>
@@ -41,16 +41,16 @@ export default function Header() {
                 className='menu menu-lg dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-80 shadow-lg'
               >
                 <li key='1'>
-                  <a className='justify-between'>
-                    Profile
-                    <span className='badge'>New</span>
-                  </a>
+                  <Link href='/mypage' className='justify-between'>
+                    내 마당
+                    <span className='badge'>새로운</span>
+                  </Link>
                 </li>
                 <li key='2'>
-                  <a>Settings</a>
+                  <a>설정</a>
                 </li>
                 <li key='3'>
-                  <a>Logout</a>
+                  <Link href='/login'>로그인하기</Link>
                 </li>
               </ul>
             </div>

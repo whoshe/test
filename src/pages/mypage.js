@@ -1,7 +1,11 @@
-import LayoutMypage from '@/component/layoutMypage'
+import Layout from '@/component/layout'
 
 export default function Mypage() {
-  return <h1>내 지면</h1>
+  return (
+    <section className='flex justify-center items-center'>
+      <h1>내 마당</h1>
+    </section>
+  )
 }
 
-Mypage.getLayout = (page) => <LayoutMypage>{page}</LayoutMypage>
+Mypage.getLayout = (page) => <Layout>{page}</Layout>
