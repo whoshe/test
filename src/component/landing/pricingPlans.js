@@ -3,23 +3,25 @@ import CheckIcon from '@heroicons/react/24/outline/CheckIcon'
 import Link from 'next/link'
 import { useDispatch, useSelector } from 'react-redux'
 
-const freePointers = ['사회적 의미 있는', '책 관련 행사예요', '광고를 교환해요', '기타']
+const freePointers = ['독립서점을 응원하는', '사회적 의미 있는', '광고를 교환해요', '기타']
 
 const advancePointers = [
   '100자 이내 짧은 기사',
-  '매주 수요일에 정기 정기 소식지 내 발행',
-  '검토에 따라 인스타그램 노출 지원(선택)',
+  '수요일에 정기 소식지 내 발행',
   '메인 광고판 노출 지원(공통)',
+  '검토에 따라 인스타그램 노출 지원(선택)',
+  '사후 이메일 고객 지원(선택)',
   '기타',
 ]
 
 const professionalPointers = [
   '500자 이상의 긴 기사',
-  '화/목 또는 희망일에 개별 소식지 발행',
+  '화/목/희망일에 개별 소식지 발행',
+  '수요일에 정기 소식지 내 발행',
+  '인스타그램에 카드뉴스 노출 제공',
   '캠페인 초안 검토 및 결과 보고',
-  '인스타그램에 노출 제공',
-  '이메일 또는 전화 상담 제공(선택)',
   '메인 광고판 노출 지원(공통)',
+  '이메일/전화 자문상담 지원(선택)',
   '기타',
 ]
 
@@ -49,10 +51,10 @@ function PricingPlans() {
             <h1 className='font-bold mt-4 text-4xl'>₩ 0</h1>
             <span>( - )</span>
             <Link
-              href=''
-              className='btn text-base !hover:text-white hover:bg-primary mt-8 w-full  btn-outline normal-case btn-disabled'
+              href='https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform'
+              className='btn text-base btn-outline !hover:text-white mt-8 w-full normal-case'
             >
-              기타 협업
+              협업 신청하기
             </Link>
 
             <ul className='text-left mt-4 text-lg'>
@@ -69,7 +71,7 @@ function PricingPlans() {
 
         <div className='card mt-6  bg-base-100 shadow-xl hover:shadow-2xl border'>
           <div className='card-body pt-12 pb-16 items-center  '>
-            <div className='badge text-base badge-primary absolute text-white mt-1 ml-1 left-2 top-2'>
+            <div className='badge text-base badge-primary absolute text-base-100 mt-1 ml-1 left-2 top-2'>
               가장 인기있는
             </div>
             <h3 className='card-title text-xl text-center'>기본</h3>

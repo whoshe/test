@@ -40,16 +40,16 @@ export default function Header() {
                 tabIndex='0'
                 className='menu menu-lg dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-80 shadow-lg'
               >
-                <li>
+                <li key='1'>
                   <a className='justify-between'>
                     Profile
                     <span className='badge'>New</span>
                   </a>
                 </li>
-                <li>
+                <li key='2'>
                   <a>Settings</a>
                 </li>
-                <li>
+                <li key='3'>
                   <a>Logout</a>
                 </li>
               </ul>

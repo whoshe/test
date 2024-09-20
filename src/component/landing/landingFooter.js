@@ -4,6 +4,8 @@ import BiOrigin from '/public/img/logo-origin.svg'
 import Youtube from '/public/img/icons/youtube.svg'
 import Twitter from '/public/img/icons/twitter.svg'
 import Instagram from '/public/img/icons/instagram.svg'
+import Newsletter from '/public/img/icons/mail.svg'
+import { EnvelopeOpenIcon } from '@heroicons/react/24/outline'
 
 export default function Footer() {
   const date = new Date()
@@ -34,7 +36,11 @@ export default function Footer() {
           <contact className='container mx-auto flex max-sm:flex-col justify-center lg:justify-between gap-4'>
             <div className='flex items-center lg:grow'>
               {/** 웹사이트 */}
-              <Link href='https://www.bookshopmap.com' className='btn btn-sm btn-ghost text-xl '>
+              <Link
+                href='https://www.bookshopmap.com'
+                className='btn btn-sm btn-ghost text-xl tooltip tooltip-top inline-flex'
+                data-tip='동네서점 홈으로'
+              >
                 <BiOrigin width={16} height={16} className='w-8 h-8 fill-current' />
                 동네서점
               </Link>
@@ -47,20 +53,40 @@ export default function Footer() {
             </div>
 
             <div className='flex flex-wrap items-center justify-center gap-4'>
-              {/** 소셜미디어 채널 구독하기 */}
-              <Link href='https://www.instagram.com/bookshopmap'>
+              {/** 동네서점 채널 구독하기 */}
+              <Link
+                href='https://www.bookshopmap.com/newsletter'
+                className='tooltip tooltip-top'
+                data-tip='소식지'
+              >
+                <Newsletter width={24} height={24} className='w-7 h-7 ' />
+              </Link>
+              <Link
+                href='https://www.instagram.com/bookshopmap'
+                className='tooltip tooltip-top'
+                data-tip='인스타그램'
+              >
                 <Instagram width={24} height={24} className='w-6 h-6 ' />
               </Link>
-              <Link href='https://www.twitter.com/bookshopmap'>
+              <Link
+                href='https://www.twitter.com/bookshopmap'
+                className='tooltip tooltip-top'
+                data-tip='X 트위터'
+              >
                 <Twitter width={24} height={24} className='w-6 h-6 ' />
               </Link>
-              <Link href='https://www.youtube.com/@bookshopmap'>
+              <Link
+                href='https://www.youtube.com/@bookshopmap'
+                className='tooltip tooltip-top'
+                data-tip='유튜브'
+              >
                 <Youtube width={24} height={24} className='w-6 h-6 ' />
               </Link>
 
               {/** 카카오톡 채널 추가하기 */}
               <div
-                className=''
+                className='tooltip tooltip-top'
+                data-tip='카카오톡채널'
                 id='kakao-talk-channel-add-button'
                 data-channel-public-id='_xeLPbC'
                 data-size='small'
