@@ -1,12 +1,12 @@
 import LayoutAdmin from '@/component/layoutAdmin'
 import Layout from '@/component/layout'
 import Link from 'next/link'
-import KitchenHeader from '@/component/kitchen/kitchenHeader'
+import KitchenNav from '@/component/kitchen/kitchenNav'
 
 export default function Kitchen() {
   return (
     <>
-      <KitchenHeader />
+      <KitchenNav />
       <section>
         {/* 부엌 조리대 */}
         <div className='mx-auto py-12'>

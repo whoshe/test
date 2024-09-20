@@ -1,4 +1,4 @@
-import KitchenHeader from '@/component/kitchen/kitchenHeader'
+import KitchenNav from '@/component/kitchen/kitchenNav'
 import Layout from '@/component/layout'
 import LayoutAdmin from '@/component/layoutAdmin'
 import BI from '/public/img/logo.svg'
@@ -56,7 +56,7 @@ export default function Etc() {
 
   return (
     <>
-      <KitchenHeader />
+      <KitchenNav />
       <section>
         <div className='p-2'>
           <h2 className='text-2xl font-bold'>기타</h2>

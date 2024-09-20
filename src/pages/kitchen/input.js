@@ -1,11 +1,11 @@
 import LayoutAdmin from '@/component/layoutAdmin'
 import Layout from '@/component/layout'
-import KitchenHeader from '@/component/kitchen/kitchenHeader'
+import KitchenNav from '@/component/kitchen/kitchenNav'
 
 export default function Input() {
   return (
     <>
-      <KitchenHeader />
+      <KitchenNav />
       <section>
         {/* 부엌 조리대 */}
         <div className='py-2'>
