@@ -10,6 +10,7 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 import Poster from '/public/img/service/purpose-of-bookshopmap.svg'
+import { NextSeo } from 'next-seo'
 
 const keywordsData = [
   {
@@ -385,6 +386,13 @@ const faqData = [
 export default function Landing() {
   return (
     <>
+      <NextSeo
+        title='신간알림이 도착했어요'
+        openGraph={{
+          url: '/landing',
+          images: [{ url: '' }],
+        }}
+      />
       <section
         id='purpose'
         className='container mx-auto justify-center items-center my-16 md:my-32 p-4'

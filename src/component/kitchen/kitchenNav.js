@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-export default function KitchenHeader() {
+export default function KitchenNav() {
   const items = [
     {
       id: '0',
@@ -27,7 +27,12 @@ export default function KitchenHeader() {
     {
       id: '4',
       name: '리액트',
-      path: '/kitchen/reactTest',
+      path: '/kitchen/react',
+    },
+    {
+      id: '5',
+      name: '스캔(HTML5)',
+      path: '/kitchen/scan',
     },
   ]
   const router = useRouter()

@@ -1,13 +1,10 @@
-import KitchenHeader from '@/component/kitchen/kitchenHeader'
+import KitchenNav from '@/component/kitchen/kitchenNav'
 import Layout from '@/component/layout'
 import { Fragment, useRef, useEffect, useLayoutEffect, useState } from 'react'
 import {} from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import Image from 'next/image'
-
-import { Html5QrcodeScanner } from 'html5-qrcode'
 import { useRouter } from 'next/router'
-import Html5QrcodePlugin from '@/component/html5qrcodePlugin'
 
 const user = {
   name: 'Hedy Lamarr',
@@ -16,9 +13,6 @@ const user = {
 }
 
 function Welcome({ name }) {
-  const onNewScanResult = (decodedText, decodedResult) => {
-    // handle decoded results here
-  }
   return (
     <>
       <section className='artboard artboard-demo p-4 gap-4'>
@@ -36,19 +30,8 @@ function Welcome({ name }) {
           </figure>
           <h3 className='text-xl'>어서오세요 {name} 님,</h3>
         </div>
-        <section className='min-h-screen mx-auto max-w-xl gap-2'>
-          <Html5QrcodePlugin
-            fps={10}
-            qrbox={250}
-            disableFlip={false}
-            qrCodeSuccessCallback={onNewScanResult}
-          />
-          <div className='text-center'>
-            <h3 className='text-xl font-bold'>상품권 QR 코드를 스캔하세요.</h3>
-          </div>
-        </section>
         <div className='text-center'>
-          <h3 className='text-xl'>QR 코드를 스캔하세요.</h3>
+          <h3 className='text-xl'>아이폰 목업</h3>
           <div className='mockup-phone'>
             <div className='camera'></div>
             <div className='display'>
@@ -232,37 +215,6 @@ function ProductRow({ product }) {
 }
 
 export default function ReactTest() {
-  const router = useRouter()
-  const [qrScanner, setQrScanner] = useState(null)
-  const qrScannerRef = useRef(null)
-
-  useEffect(() => {
-    // Initialize scanner only once
-    if (qrScannerRef.current && !qrScanner) {
-      const scanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: 250 }, false)
-
-      const onScanSuccess = (decodedText, decodedResult) => {
-        const voucherId = decodedText.substring(decodedText.lastIndexOf('/') + 1)
-        router.push(`/admin/voucher/${voucherId}`)
-        scanner.clear().catch(console.error)
-      }
-
-      const onScanFailure = (error) => {
-        console.warn(`QR error = ${error}`)
-      }
-
-      scanner.render(onScanSuccess, onScanFailure)
-      setQrScanner(scanner)
-    }
-
-    // Cleanup function to clear the scanner when the component unmounts
-    return () => {
-      if (qrScanner) {
-        qrScanner.clear().catch(console.error)
-      }
-    }
-  }, [qrScanner])
-
   const [count, setCount] = useState(0)
 
   function handleClick() {
@@ -270,7 +222,7 @@ export default function ReactTest() {
   }
   return (
     <>
-      <KitchenHeader />
+      <KitchenNav />
       {/* 리액트 테스트 */}
       <section className='p-4'>
         <h2 className='text-2xl font-bold'>리액트</h2>

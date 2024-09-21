@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import Layout from '@/component/layout'
-import KitchenHeader from '@/component/kitchen/kitchenHeader'
 import toast, { Toaster } from 'react-hot-toast'
+import { NextSeo } from 'next-seo'
+import KitchenNav from '@/component/kitchen/kitchenNav'
+// 리액트 스캐너
+import { Scanner } from '@yudiel/react-qr-scanner'
+
+import React, { useEffect } from 'react'
 
 // 푸시 알림
 const notify = () =>
@@ -33,8 +38,15 @@ function Welcome({ name }) {
 export default function Root() {
   return (
     <>
+      <NextSeo
+        title='부엌'
+        openGraph={{
+          url: '',
+          images: [{ url: '' }],
+        }}
+      />
       {/** 머리글 */}
-      <KitchenHeader />
+      <KitchenNav />
       <div className='container mx-auto grid grid-flow-row gap-4'>
         <section className='card w-full bg-base-100 shadow-md'>
           {/* 환영 인사 */}
@@ -66,6 +78,23 @@ export default function Root() {
                   },
                 }}
               />
+            </div>
+          </div>
+        </section>
+        <section className='card w-full bg-base-100 shadow-md border'>
+          {/* React 스캔 */}
+          <div className='p-4 card-body'>
+            <h1 className='text-3xl'>React 스캔</h1>
+            <h3 className='text-xl'>react-qr-scanner 스캔 테스트</h3>
+            <div>
+              스캐너 테스트 실패
+              {/* <Scanner
+                onScan={(result) => console.log(result)}
+                formats={[
+                  'qr_code', // QR コード
+                  'micro_qr_code', // マイクロ QR
+                ]}
+              /> */}
             </div>
           </div>
         </section>

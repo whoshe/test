@@ -1,4 +1,3 @@
-import KitchenHeader from '@/component/kitchen/kitchenHeader'
 import Layout from '@/component/layout'
 import LayoutAdmin from '@/component/layoutAdmin'
 import BI from '/public/img/logo.svg'
@@ -13,6 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import Image from 'next/image'
+import KitchenNav from '@/component/kitchen/kitchenNav'
 
 const people = ['대전 유성', '서울 마포구', '서울 강서구', '합정', '세종특별자치시 한누리대로']
 
@@ -56,7 +56,7 @@ export default function Combo() {
 
   return (
     <>
-      <KitchenHeader />
+      <KitchenNav />
       <section className='p-2'>
         <h2 className='text-2xl font-bold'>검색</h2>
         {/* 콤보박스 with Headless UI */}
