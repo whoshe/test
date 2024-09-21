@@ -84,17 +84,12 @@ export default function Root() {
         <section className='card w-full bg-base-100 shadow-md border'>
           {/* React 스캔 */}
           <div className='p-4 card-body'>
-            <h1 className='text-3xl'>React 스캔</h1>
-            <h3 className='text-xl'>react-qr-scanner 스캔 테스트</h3>
+            <h1 className='text-3xl'>Nextjs 스캐너</h1>
+            <h3 className='text-xl'>react-qr-reader for Nextjs 소스 스캔 작동 테스트 완료!</h3>
             <div>
-              스캐너 테스트 실패
-              {/* <Scanner
-                onScan={(result) => console.log(result)}
-                formats={[
-                  'qr_code', // QR コード
-                  'micro_qr_code', // マイクロ QR
-                ]}
-              /> */}
+              <Link href='/kitchen/nextjs-scanner' className='btn text-lg'>
+                스캔하기
+              </Link>
             </div>
           </div>
         </section>
