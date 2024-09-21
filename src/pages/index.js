@@ -3,6 +3,11 @@ import Layout from '@/component/layout'
 import toast, { Toaster } from 'react-hot-toast'
 import { NextSeo } from 'next-seo'
 import KitchenNav from '@/component/kitchen/kitchenNav'
+// 리액트 스캐너
+import { Scanner } from '@yudiel/react-qr-scanner'
+
+import React, { useEffect } from 'react'
+
 // 푸시 알림
 const notify = () =>
   // 푸시 알림: 성공
@@ -81,7 +86,16 @@ export default function Root() {
           <div className='p-4 card-body'>
             <h1 className='text-3xl'>React 스캔</h1>
             <h3 className='text-xl'>react-qr-scanner 스캔 테스트</h3>
-            <div>스캐너는 여기에</div>
+            <div>
+              스캐너 테스트 실패
+              {/* <Scanner
+                onScan={(result) => console.log(result)}
+                formats={[
+                  'qr_code', // QR コード
+                  'micro_qr_code', // マイクロ QR
+                ]}
+              /> */}
+            </div>
           </div>
         </section>
       </div>
