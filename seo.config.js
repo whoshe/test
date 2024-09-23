@@ -1,6 +1,6 @@
 export default {
-  defaultTitle: '동네서점 (연습장)',
-  titleTemplate: '%s | 동네서점 (연습장)',
+  defaultTitle: '연습장',
+  titleTemplate: '%s | 연습장',
   description: '내 이웃의 문화예술',
   canonical: '/',
   openGraph: {

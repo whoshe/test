@@ -20,11 +20,6 @@ export default function KitchenNav() {
       path: '/kitchen/combo',
     },
     {
-      id: '3',
-      name: '기타',
-      path: '/kitchen/etc',
-    },
-    {
       id: '4',
       name: '리액트',
       path: '/kitchen/react',
@@ -33,6 +28,16 @@ export default function KitchenNav() {
       id: '5',
       name: '스캔(HTML5)',
       path: '/kitchen/scan',
+    },
+    {
+      id: '6',
+      name: '기사',
+      path: '/kitchen/article',
+    },
+    {
+      id: '3',
+      name: '기타',
+      path: '/kitchen/etc',
     },
   ]
   const router = useRouter()
