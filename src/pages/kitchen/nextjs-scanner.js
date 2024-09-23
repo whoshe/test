@@ -58,10 +58,7 @@ export default function Scan() {
           <Link href='https://github.com/nukrobzero/qr-code-scanner-next-js'>
             https://github.com/nukrobzero/qr-code-scanner-next-js
           </Link>
-          <Link
-            href={`/`}
-            className=' bg-yellow-200 m-4 text-md rounded-md px-4 py-2 hover:underline'
-          >
+          <Link href={`/`} className='btn btn-primary text-lg'>
             돌아가기
           </Link>
           {showModal && (
