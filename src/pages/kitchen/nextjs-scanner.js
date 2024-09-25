@@ -20,6 +20,7 @@ export default function Scan() {
   const [startScan, setStartScan] = useState(false)
   const [data, setData] = useState('결과 값 없음')
 
+  // 여러 QR코드를 스캔할 수 있도록 초기화 추가 필요
   const handleScan = (result, error) => {
     if (result?.text) {
       // result가 null인지 먼저 확인
