@@ -6,10 +6,7 @@ import KitchenNav from '@/component/kitchen/kitchenNav'
 import React, { useEffect } from 'react'
 // Nextjs 스캐너
 import Scanner from './kitchen/nextjs-scanner'
-import dynamic from 'next/dynamic'
-const DynamicScanner = dynamic(() => import('./kitchen/nextjs-scanner'), {
-  loading: () => <p>Loading...</p>,
-})
+// import dynamic from 'next/dynamic'
 
 // 푸시 알림
 const notify = () =>
@@ -49,6 +46,7 @@ export default function Root() {
         }}
       />
       {/** 머리글 */}
+
       <KitchenNav />
       <div className='container mx-auto grid grid-flow-row gap-4'>
         <section className='card w-full bg-base-100 shadow-md'>
@@ -102,9 +100,9 @@ export default function Root() {
               </button>
             </div>
             {/* Modal 내용 */}
-            <dialog id='my_modal_2' className='modal modal-bottom xl:modal-middle'>
+            <dialog id='my_modal_2' className='modal modal-bottom'>
               <div className='modal-box'>
-                <DynamicScanner />
+                <Scanner />
                 <div className='modal-action'>
                   <form method='dialog'>
                     {/* if there is a button in form, it will close the modal */}
@@ -118,11 +116,17 @@ export default function Root() {
             </dialog>
           </div>
         </section>
+        <section className='card w-full bg-base-100 shadow-md'>
+          <div className='p-4 card-title'>가나다</div>
+          <div className='card-body'>가나다</div>
+        </section>
+
         {/* 서랍 */}
         <section className='card w-full bg-base-100 shadow-md'>
           <div className='p-4 card-title'>서랍</div>
           <div className='card-body'>
             <div className='drawer'>
+              {/* 왼쪽 서랍 */}
               <input id='left-side-drawer' type='checkbox' className='drawer-toggle' />
               <div className='drawer-content'>
                 <div className='flex justify-between'>
@@ -153,6 +157,7 @@ export default function Root() {
               </div>
             </div>
             <div className='drawer drawer-end'>
+              {/* 오른쪽 서랍 */}
               <input id='right-side-drawer' type='checkbox' className='drawer-toggle' />
               <div className='drawer-side'>
                 <label htmlFor='right-side-drawer' className='drawer-overlay'></label>
@@ -163,10 +168,6 @@ export default function Root() {
               </div>
             </div>
           </div>
-        </section>
-        <section className='card w-full bg-base-100 shadow-md'>
-          <div className='p-4 card-title'>가나다</div>
-          <div className='card-body'>가나다</div>
         </section>
       </div>
     </>

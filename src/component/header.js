@@ -29,7 +29,7 @@ export default function Header() {
           </div>
           <div className='flex-none'>
             <div className='dropdown dropdown-end'>
-              <div tabIndex='0' role='button' className='btn btn-ghost btn-circle avatar'>
+              <div tabIndex='0' role='button' className='btn btn-ghost btn-circle avatar z-0'>
                 <figure className='avatar online placeholder'>
                   <div className='bg-neutral-400 w-10 rounded-full hover:ring ring-primary ring-offset-2'>
                     <span className='text-2xl text-neutral-content'>B</span>

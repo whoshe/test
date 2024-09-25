@@ -5,6 +5,24 @@ import Head from 'next/head'
 import Link from 'next/link'
 import axios from 'axios'
 
+function ScanOverlay() {
+  return (
+    <>
+      <svg viewBox='0 0 100 100' className='top-0 left-0 z-10 absolute w-full h-full p-8'>
+        <path fill='none' d='M13,0 L0,0 L0,13' stroke='rgba(255, 0, 0, 0.5)' strokeWidth='5' />
+        <path fill='none' d='M0,87 L0,100 L13,100' stroke='rgba(255, 0, 0, 0.5)' strokeWidth='5' />
+        <path
+          fill='none'
+          d='M87,100 L100,100 L100,87'
+          stroke='rgba(255, 0, 0, 0.5)'
+          strokeWidth='5'
+        />
+        <path fill='none' d='M100,13 L100,0 87,0' stroke='rgba(255, 0, 0, 0.5)' strokeWidth='5' />
+      </svg>
+    </>
+  )
+}
+
 export default function Scan() {
   const router = useRouter()
   const [data, setData] = useState('No result')
@@ -46,11 +64,12 @@ export default function Scan() {
           <h1 className='text-4xl font-bold mb-4'>QR Scanner for Nextjs</h1>
           <div>
             <QrReader
-              className='w-screen h-auto'
+              delay={1000}
+              className='w-96 h-96'
               //   className='lg:h-[400px] lg:w-[400px] h-[300px] w-[300px]'
               onResult={handleScan}
               constraints={{ facingMode: 'environment' }}
-              //   style={{ width: '40%', height: '40%' }}
+              ViewFinder={ScanOverlay}
               ref={qrRef}
             />
           </div>

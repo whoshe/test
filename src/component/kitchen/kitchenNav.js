@@ -46,9 +46,9 @@ export default function KitchenNav() {
   return (
     <>
       <h1 className='text-3xl'>부엌</h1>
-      <section className='p-2'>
-        <div className='overflow-x-auto'>
-          <ul className='flex flex-nowrap gap-2'>
+      <div className='p-2'>
+        <section>
+          <ul className='flex flex-wrap gap-2'>
             {items.map((item) => (
               <React.Fragment key={item.id}>
                 <li
@@ -67,8 +67,8 @@ export default function KitchenNav() {
               </React.Fragment>
             ))}
           </ul>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   )
 }
