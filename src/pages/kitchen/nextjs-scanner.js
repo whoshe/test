@@ -20,6 +20,7 @@ export default function Scan() {
   const [startScan, setStartScan] = useState(false)
   const [data, setData] = useState('결과 값 없음')
 
+  // 여러 QR코드를 스캔할 수 있도록 초기화 추가 필요
   const handleScan = (result, error) => {
     if (result?.text) {
       // result가 null인지 먼저 확인
@@ -52,8 +53,6 @@ export default function Scan() {
                   <option value='user'>전면 카메라</option>
                 </select>
                 <QrReader
-                  facingMode={selected}
-                  delay={1000}
                   className='w-96 h-96'
                   onResult={handleScan}
                   constraints={{ facingMode: selected }}
@@ -65,12 +64,11 @@ export default function Scan() {
 
           <button
             onClick={() => setStartScan(!startScan)}
-            className={startScan ? `btn btn-primary text-lg` : `btn btn-neutral text-lg`}
+            className={'btn text-lg ' + (startScan ? 'btn-primary' : 'btn-neutral')}
           >
             {startScan ? '스캔하는 중..' : '스캔하기'}
           </button>
-          {data && <p>{data}</p>}
-
+          {data !== '' && <p>{data}</p>}
           <Link href='/' className='btn btn-ghost text-lg mt-8'>
             돌아가기
           </Link>
