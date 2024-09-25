@@ -16,14 +16,19 @@ export default function Scan() {
   return (
     <>
       <KitchenNav />
-      <section className='artboard artboard-demo p-4 gap-4'>
-        <div className='flex gap-2 items-center justify-center'>스캔하기</div>
-        <Html5QrcodePlugin
-          fps={10}
-          qrbox={250}
-          disableFlip={false}
-          qrCodeSuccessCallback={onNewScanResult}
-        />
+      <section className='container mx-auto'>
+        <div className='card artboard artboard-demo p-4 gap-4'>
+          <div className='card-title'>스캔하기</div>
+          <div className='card-body'>
+            <Html5QrcodePlugin
+              fps={10}
+              qrbox={250}
+              disableFlip={false}
+              qrCodeSuccessCallback={onNewScanResult}
+              className='w-96 h-96'
+            />
+          </div>
+        </div>
       </section>
     </>
   )

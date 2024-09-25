@@ -1,36 +1,35 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { QrReader } from 'react-qr-reader'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
-import axios from 'axios'
+
+const ScanOverlay = () => (
+  <svg
+    viewBox='0 0 100 100'
+    className='top-0 left-0 z-10 absolute w-full h-full border-[50px] border-neutral-900/30'
+  >
+    <path fill='none' d='M13,0 L0,0 L0,13' stroke='rgba(255, 0, 0, 0.5)' strokeWidth='5' />
+    <path fill='none' d='M0,87 L0,100 L13,100' stroke='rgba(255, 0, 0, 0.5)' strokeWidth='5' />
+    <path fill='none' d='M87,100 L100,100 L100,87' stroke='rgba(255, 0, 0, 0.5)' strokeWidth='5' />
+    <path fill='none' d='M100,13 L100,0 87,0' stroke='rgba(255, 0, 0, 0.5)' strokeWidth='5' />
+  </svg>
+)
 
 export default function Scan() {
-  const router = useRouter()
-  const [data, setData] = useState('No result')
-  const [showModal, setShowModal] = useState(false)
-  const qrRef = useRef(null)
+  const [selected, setSelected] = useState('environment')
+  const [startScan, setStartScan] = useState(false)
+  const [data, setData] = useState('결과 값 없음')
 
   const handleScan = (result, error) => {
-    if (!!result) {
-      setData(result?.text)
-      setShowModal(true)
-      qrRef.current.stop()
+    if (result?.text) {
+      // result가 null인지 먼저 확인
+      setData(result.text)
+      setStartScan(false) // 스캔 완료 후 스캔 종료
     }
 
-    if (!!error) {
+    if (error) {
       console.info(error)
     }
-  }
-
-  const handleCloseModal = () => {
-    setShowModal(false)
-    router.reload()
-  }
-
-  const handleOK = async () => {
-    await axios.post(`/api/postData`, { data })
-    router.reload()
   }
 
   return (
@@ -42,45 +41,39 @@ export default function Scan() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className='flex flex-col mt-[5rem] justify-center items-center'>
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center gap-4'>
           <h1 className='text-4xl font-bold mb-4'>QR Scanner for Nextjs</h1>
+          <h2>현재 카메라: {selected}</h2>
           <div>
-            <QrReader
-              className='w-screen h-auto'
-              //   className='lg:h-[400px] lg:w-[400px] h-[300px] w-[300px]'
-              onResult={handleScan}
-              constraints={{ facingMode: 'environment' }}
-              //   style={{ width: '40%', height: '40%' }}
-              ref={qrRef}
-            />
+            {startScan && (
+              <>
+                <select onChange={(e) => setSelected(e.target.value)}>
+                  <option value='environment'>후면 카메라</option>
+                  <option value='user'>전면 카메라</option>
+                </select>
+                <QrReader
+                  facingMode={selected}
+                  delay={1000}
+                  className='w-96 h-96'
+                  onResult={handleScan}
+                  constraints={{ facingMode: selected }}
+                  ViewFinder={ScanOverlay}
+                />
+              </>
+            )}
           </div>
-          깃헙 소스:{' '}
-          <Link href='https://github.com/nukrobzero/qr-code-scanner-next-js'>
-            https://github.com/nukrobzero/qr-code-scanner-next-js
-          </Link>
-          <Link href={`/`} className='btn btn-primary text-lg'>
+
+          <button
+            onClick={() => setStartScan(!startScan)}
+            className={startScan ? `btn btn-primary text-lg` : `btn btn-neutral text-lg`}
+          >
+            {startScan ? '스캔하는 중..' : '스캔하기'}
+          </button>
+          {data && <p>{data}</p>}
+
+          <Link href='/' className='btn btn-ghost text-lg mt-8'>
             돌아가기
           </Link>
-          {showModal && (
-            <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
-              <div className='bg-white rounded-md p-4'>
-                <p className='text-xl font-bold mb-2'>Scanned data:</p>
-                <p>{data}</p>
-                <button
-                  className='bg-gray-200 text-gray-800 px-4 py-2 rounded-md mt-4 hover:bg-gray-300'
-                  onClick={handleCloseModal}
-                >
-                  Close
-                </button>
-                <button
-                  className='bg-gray-200 text-gray-800 px-4 py-2 rounded-md mx-4 mt-4 hover:bg-gray-300'
-                  onClick={handleOK}
-                >
-                  Ok
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </main>
     </>
