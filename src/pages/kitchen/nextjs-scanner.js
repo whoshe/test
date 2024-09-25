@@ -53,8 +53,6 @@ export default function Scan() {
                   <option value='user'>전면 카메라</option>
                 </select>
                 <QrReader
-                  facingMode={selected}
-                  delay={1000}
                   className='w-96 h-96'
                   onResult={handleScan}
                   constraints={{ facingMode: selected }}
@@ -66,12 +64,11 @@ export default function Scan() {
 
           <button
             onClick={() => setStartScan(!startScan)}
-            className={startScan ? `btn btn-primary text-lg` : `btn btn-neutral text-lg`}
+            className={'btn text-lg ' + (startScan ? 'btn-primary' : 'btn-neutral')}
           >
             {startScan ? '스캔하는 중..' : '스캔하기'}
           </button>
-          {data && <p>{data}</p>}
-
+          {data !== '' && <p>{data}</p>}
           <Link href='/' className='btn btn-ghost text-lg mt-8'>
             돌아가기
           </Link>
