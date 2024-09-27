@@ -2,6 +2,7 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://whoshe.github.io/test",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
