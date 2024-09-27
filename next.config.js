@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 
+const debug = process.env.NODE_ENV !== 'production'
+const repo = 'test'
+
 const nextConfig = {
   reactStrictMode: true,
   // i18n: {
