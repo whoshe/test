@@ -19,6 +19,7 @@
     "date-fns": "^4.1.0",
     "eslint": "8.32.0",
     "eslint-config-next": "13.4.13",
+    "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "html5-qrcode": "^2.3.8",
     "next": "^13.5.6",
