@@ -5,7 +5,7 @@ import Link from 'next/link'
 import ScanHighlight from '/public/img/svg/scanhighlight.svg'
 
 const ScanOverlay = () => (
-  <ScanHighlight className='top-0 left-0 z-10 absolute w-full h-full text-primary border-[50px] border-neutral-900/20' />
+  <ScanHighlight className='absolute w-full h-full top-0 left-0 z-10 text-primary border-[50px] border-neutral-900/20' />
 )
 
 export default function Scan() {
