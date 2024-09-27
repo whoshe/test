@@ -3,7 +3,6 @@ import { QrReader } from 'react-qr-reader'
 import Head from 'next/head'
 import Link from 'next/link'
 import ScanHighlight from '/public/img/svg/scanhighlight.svg'
-// import ScanHighlight from 'public/img/svg/scan-svgrepo-com.svg'
 
 const ScanOverlay = () => (
   <ScanHighlight className='top-0 left-0 z-10 absolute w-full h-full text-primary border-[50px] border-neutral-900/20' />
