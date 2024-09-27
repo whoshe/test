@@ -70,15 +70,15 @@ export default function Root({ allPostsData }) {
           <div className='card-body'>
             <ul className='grid auto-rows-fr gap-4'>
               {latestPosts.map(({ id, date, title }) => (
-                <li className='card card-compact border hover:border-neutral' key={id}>
-                  <div className='card-body grid grid-flow-row content-between'>
-                    <Link className='card-title text-lg' href={`/posts/${id}`}>
-                      {title}
-                    </Link>
-                    <div className='text-base text-neutral-400'>
-                      <Date dateString={date} />
+                <li className='card card-compact border hover:border-neutral-400' key={id}>
+                  <Link href={`/posts/${id}`}>
+                    <div className='card-body grid grid-flow-row content-between'>
+                      <span className='card-title text-lg'>{title}</span>
+                      <div className='text-base text-neutral-400'>
+                        <Date dateString={date} />
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -89,7 +89,7 @@ export default function Root({ allPostsData }) {
             </Link>
           </div>
         </section>
-        <section className='card w-full bg-base-100 shadow-md border'>
+        <section className='card w-full bg-base-100 shadow-md'>
           {/* 푸시 알림 */}
           <div className='p-4 card-title'>푸시 알림</div>
           <div className='card-body'>
@@ -101,7 +101,7 @@ export default function Root({ allPostsData }) {
                 position='top-right'
                 reverseOrder={true}
                 toastOptions={{
-                  className: '',
+                  className: 'bg-base-100',
                   style: {
                     border: '',
                     padding: '16px',
@@ -112,7 +112,7 @@ export default function Root({ allPostsData }) {
             </div>
           </div>
         </section>
-        <section className='card w-full bg-base-100 shadow-md border'>
+        <section className='card w-full bg-base-100 shadow-md'>
           {/* React 스캔 */}
           <div className='p-4 card-title'>Nextjs 스캐너 (반응형 모달)</div>
           <div className='card-body'>

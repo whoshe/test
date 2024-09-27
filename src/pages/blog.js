@@ -27,15 +27,15 @@ export default function Blog({ allPostsData }) {
         <section className='my-8'>
           <ul className='grid auto-rows-fr gap-4'>
             {allPostsData.map(({ id, date, title }) => (
-              <li className='card card-compact border hover:border-neutral' key={id}>
-                <div className='card-body grid grid-flow-row content-between'>
-                  <Link className='card-title text-lg' href={`/posts/${id}`}>
-                    {title}
-                  </Link>
-                  <div className='text-base text-neutral-400'>
-                    <Date dateString={date} />
+              <li className='card card-compact border hover:border-neutral-400' key={id}>
+                <Link href={`/posts/${id}`}>
+                  <div className='card-body grid grid-flow-row content-between'>
+                    <span className='card-title text-lg'>{title}</span>
+                    <div className='text-base text-neutral-400'>
+                      <Date dateString={date} />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </li>
             ))}
           </ul>
