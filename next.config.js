@@ -2,13 +2,13 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  i18n: {
-    locales: ['en', 'ko'],
-    defaultLocale: 'ko',
-    localeDetection: false,
-  },
-  /*target: "serverless",
-   output: 'standalone',*/
+  // i18n: {
+  //   locales: ['en', 'ko'],
+  //   defaultLocale: 'ko',
+  //   localeDetection: false,
+  // },
+  // output: 'standalone',
+  /*target: "serverless",*/
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -26,6 +26,7 @@ const nextConfig = {
       },
     ]
   },
+  output: 'export',
 }
 
 module.exports = nextConfig
