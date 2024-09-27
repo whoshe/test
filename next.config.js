@@ -7,8 +7,8 @@ const nextConfig = {
     defaultLocale: 'ko',
     localeDetection: false,
   },
-  /*target: "serverless",*/
-  output: 'standalone',
+  /*target: "serverless",
+   output: 'standalone',*/
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
