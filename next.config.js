@@ -18,8 +18,7 @@ const nextConfig = {
     return config
   },
   images: {
-    loader: 'imgix',
-    path: 'https://whoshe.github.io/test',
+    unoptimized: true,
   },
   // async redirects() {
   //   return [
