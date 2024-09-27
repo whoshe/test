@@ -2,7 +2,7 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://whoshe.github.io/test",
+  "homepage": "https://ui.d3tb24esmxw7nr.amplifyapp.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +13,7 @@
     "load": "node --experimental-modules src/script/load.mjs"
   },
   "dependencies": {
+    "aws-amplify": "^5.0.23",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@yudiel/react-qr-scanner": "^2.0.8",
