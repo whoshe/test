@@ -14,6 +14,13 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100ch', // add required value here
+          },
+        },
+      },
     },
   },
   plugins: [require('daisyui'), require('@tailwindcss/typography')],

@@ -2,6 +2,29 @@ import Link from 'next/link'
 import { CustomPlaceholder } from 'react-placeholder-image'
 import { BeakerIcon } from '@heroicons/react/24/outline'
 
+// 탐색 메뉴
+const navData = [
+  {
+    title: '홈',
+    link: 'https://www.bookshopmap.com',
+  },
+  {
+    title: '부엌',
+    link: '/',
+  },
+  {
+    title: '광고',
+    link: '/ads',
+  },
+  {
+    title: '관리실',
+    link: '/admin',
+  },
+  {
+    title: '블로그',
+    link: '/blog',
+  },
+]
 export default function Header() {
   return (
     <>
@@ -14,19 +37,24 @@ export default function Header() {
             </figure>
             <span className='max-sm:hidden'>연습장</span>
           </Link>
-          <div className='flex-1'>
-            <div>
-              <Link href='/' className='btn btn-ghost text-lg'>
-                부엌
-              </Link>
-              <Link href='/landing' className='btn btn-ghost text-lg'>
+          <ul className='flex-1'>
+            {navData.map((menu, key) => {
+              return (
+                <li key={key}>
+                  <Link href={menu.link} className='btn btn-ghost text-lg'>
+                    {menu.title}
+                  </Link>
+                </li>
+              )
+            })}
+            {/* <Link href='/ads' className='btn btn-ghost text-lg'>
                 광고
               </Link>
               <Link href='/admin' className='btn btn-ghost text-lg'>
                 관리실
-              </Link>
-            </div>
-          </div>
+              </Link> 
+            </li>*/}
+          </ul>
           <div className='flex-none'>
             <div className='dropdown dropdown-end'>
               <div tabIndex='0' role='button' className='btn btn-ghost btn-circle avatar z-0'>
