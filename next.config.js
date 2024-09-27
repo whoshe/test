@@ -17,15 +17,15 @@ const nextConfig = {
 
     return config
   },
-  async redirects() {
-    return [
-      {
-        source: '/kitchen',
-        destination: '/',
-        permanent: true,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/kitchen',
+  //       destination: '/',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
   output: 'export',
 }
 
