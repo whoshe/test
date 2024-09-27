@@ -17,6 +17,10 @@ const nextConfig = {
 
     return config
   },
+  images: {
+    loader: 'imgix',
+    path: 'https://whoshe.github.io/test',
+  },
   // async redirects() {
   //   return [
   //     {
