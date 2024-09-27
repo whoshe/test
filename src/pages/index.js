@@ -5,8 +5,12 @@ import { NextSeo } from 'next-seo'
 import KitchenNav from '@/component/kitchen/kitchenNav'
 import React, { useEffect } from 'react'
 // Nextjs 스캐너
-import Scanner from './kitchen/nextjs-scanner'
+import Scanner from '@/pages/kitchen/nextjs-scanner'
 // import dynamic from 'next/dynamic'
+// import RecentPosts from '@/component/posts/recent-posts'
+
+import { getSortedPostsData } from '/src/lib/posts'
+import Date from '/src/component/date'
 
 // 푸시 알림
 const notify = () =>
@@ -35,7 +39,9 @@ function Welcome({ name }) {
 }
 
 // 홈 화면
-export default function Root() {
+export default function Root({ allPostsData }) {
+  // 최신 3개의 게시물만 가져오기
+  const latestPosts = (allPostsData || []).slice(0, 3)
   return (
     <>
       <NextSeo
@@ -51,11 +57,36 @@ export default function Root() {
       <div className='container mx-auto grid grid-flow-row gap-4'>
         <section className='card w-full bg-base-100 shadow-md'>
           {/* 환영 인사 */}
-          <div className='p-4 card-title'>
+          <div className='card-title p-4'>
             <Welcome name='남반장' />,
           </div>
           <div className='card-body'>
             <h3 className='text-xl'>연습장에 오신 것을 환영합니다.</h3>
+          </div>
+        </section>
+        <section className='card w-full bg-base-100 shadow-md'>
+          {/* 환영 인사 */}
+          <div className='card-title p-4'>블로그 최신</div>
+          <div className='card-body'>
+            <ul className='grid auto-rows-fr gap-4'>
+              {latestPosts.map(({ id, date, title }) => (
+                <li className='card card-compact border hover:border-neutral' key={id}>
+                  <div className='card-body grid grid-flow-row content-between'>
+                    <Link className='card-title text-lg' href={`/posts/${id}`}>
+                      {title}
+                    </Link>
+                    <div className='text-base text-neutral-400'>
+                      <Date dateString={date} />
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className='card-actions justify-end'>
+            <Link href='/blog' className='btn'>
+              블로그 더 보기
+            </Link>
           </div>
         </section>
         <section className='card w-full bg-base-100 shadow-md border'>
@@ -172,6 +203,16 @@ export default function Root() {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  // allPostsData가 없는 경우 빈 배열 반환
+  return {
+    props: {
+      allPostsData: allPostsData || [],
+    },
+  }
 }
 
 Root.getLayout = (page) => <Layout>{page}</Layout>
