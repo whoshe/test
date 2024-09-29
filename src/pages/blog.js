@@ -1,7 +1,7 @@
 import Layout from '@/component/layout'
 import { NextSeo } from 'next-seo'
 import { getSortedPostsData } from '/src/lib/posts'
-import Date from '/src/component/date'
+import Date from '../component/date'
 import Link from 'next/link'
 
 // 환영 인사
