@@ -21,7 +21,7 @@ const nextConfig = {
     return config
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // Disable optimization for all images
   },
   // async redirects() {
   //   return [
@@ -32,7 +32,7 @@ const nextConfig = {
   //     },
   //   ]
   // },
-  output: 'export',
+  // output: 'export',
 }
 
 module.exports = nextConfig

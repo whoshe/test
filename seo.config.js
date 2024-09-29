@@ -6,7 +6,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://ticket.bookshopmap.com',
+    url: 'https://ui.d3tb24esmxw7nr.amplifyapp.com',
     siteName: '동네서점 Bookshopmap',
     images: [{ url: '/cover.png' }],
     twitter: {
